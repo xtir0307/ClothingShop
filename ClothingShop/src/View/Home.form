@@ -45,7 +45,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JSpinner" name="spinner_quantity">
+            <Component class="javax.swing.JSpinner" name="spinner_quantity55">
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="0" maximum="1000" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -57,12 +57,12 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="btn_ok">
+            <Component class="javax.swing.JButton" name="btn_ok55">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Ok"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_okActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ok55ActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
@@ -151,12 +151,12 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="lab_fabric1" min="-2" pref="221" max="-2" attributes="0"/>
+                                          <Component id="lab_fabric55" min="-2" pref="221" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="lab_quantity" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="lab_quantity1" max="32767" attributes="0"/>
+                                          <Component id="lab_quantity55" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -167,7 +167,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="lab_price" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lab_price1" min="-2" pref="299" max="-2" attributes="0"/>
+                                  <Component id="lab_price55" min="-2" pref="299" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
@@ -175,23 +175,23 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lab_nameproduct" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lab_nameproduct1" max="32767" attributes="0"/>
+                          <Component id="lab_nameproduct55" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="lab_type" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lab_type1" min="-2" pref="178" max="-2" attributes="0"/>
+                          <Component id="lab_type55" min="-2" pref="178" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="lab_madein" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="lab_madein1" max="32767" attributes="0"/>
+                          <Component id="lab_madein55" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                  <Component id="lab_imgproduct" min="-2" pref="152" max="-2" attributes="0"/>
+                  <Component id="lab_imgproduct55" min="-2" pref="152" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
@@ -204,36 +204,36 @@
                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lab_nameproduct" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_nameproduct1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_nameproduct55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lab_type" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lab_madein" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_type1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_madein1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_type55" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_madein55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lab_fabric" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_fabric1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_fabric55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lab_quantity" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_quantity1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_quantity55" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lab_price" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lab_price1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lab_price55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="lab_imgproduct" max="32767" attributes="0"/>
+                  <Component id="lab_imgproduct55" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -297,7 +297,7 @@
             <Property name="text" type="java.lang.String" value="H&#xec;nh &#x1ea3;nh s&#x1ea3;n ph&#x1ea9;m:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_imgproduct">
+        <Component class="javax.swing.JLabel" name="lab_imgproduct55">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
@@ -318,7 +318,7 @@
             <Property name="text" type="java.lang.String" value="S&#x1ed1; l&#x1b0;&#x1ee3;ng c&#xf2;n: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_quantity1">
+        <Component class="javax.swing.JLabel" name="lab_quantity55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -326,7 +326,7 @@
             <Property name="text" type="java.lang.String" value="        "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_nameproduct1">
+        <Component class="javax.swing.JLabel" name="lab_nameproduct55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -334,7 +334,7 @@
             <Property name="text" type="java.lang.String" value="        "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_type1">
+        <Component class="javax.swing.JLabel" name="lab_type55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -342,7 +342,7 @@
             <Property name="text" type="java.lang.String" value="        "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_madein1">
+        <Component class="javax.swing.JLabel" name="lab_madein55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -350,7 +350,7 @@
             <Property name="text" type="java.lang.String" value="        "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_fabric1">
+        <Component class="javax.swing.JLabel" name="lab_fabric55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -366,7 +366,7 @@
             <Property name="text" type="java.lang.String" value="        "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lab_price1">
+        <Component class="javax.swing.JLabel" name="lab_price55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -417,7 +417,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tbl_products">
+            <Component class="javax.swing.JTable" name="tbl_products55">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="99" type="rgb"/>
@@ -432,7 +432,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbl_productsMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tbl_products55MouseClicked"/>
               </Events>
             </Component>
           </SubComponents>
@@ -451,9 +451,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                  <Component id="btn_addcart" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_addcart55" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btn_buy" min="-2" pref="106" max="-2" attributes="0"/>
+                  <Component id="btn_buy55" min="-2" pref="106" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -463,8 +463,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btn_addcart" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_buy" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_addcart55" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_buy55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="15" max="32767" attributes="0"/>
               </Group>
@@ -472,7 +472,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btn_buy">
+        <Component class="javax.swing.JButton" name="btn_buy55">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="99" red="ff" type="rgb"/>
@@ -483,10 +483,10 @@
             <Property name="text" type="java.lang.String" value="Mua"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buyActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buy55ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_addcart">
+        <Component class="javax.swing.JButton" name="btn_addcart55">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="ff" red="66" type="rgb"/>
@@ -497,7 +497,7 @@
             <Property name="text" type="java.lang.String" value="Th&#xea;m v&#xe0;o gi&#x1ecf; h&#xe0;ng"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_addcartActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_addcart55ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -514,9 +514,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btn_cart" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_cart55" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btn_profile" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_profile55" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="btn_logout" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -530,9 +530,9 @@
                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btn_cart" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_cart55" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_logout" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btn_profile" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_profile55" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -562,7 +562,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_logoutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_cart">
+        <Component class="javax.swing.JButton" name="btn_cart55">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="ff" red="cc" type="rgb"/>
@@ -573,10 +573,10 @@
             <Property name="text" type="java.lang.String" value="Gi&#x1ecf; h&#xe0;ng c&#x1ee7;a t&#xf4;i"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cartActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_cart55ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_profile">
+        <Component class="javax.swing.JButton" name="btn_profile55">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -584,7 +584,7 @@
             <Property name="text" type="java.lang.String" value="Th&#xf4;ng tin c&#xe1; nh&#xe2;n"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_profileActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_profile55ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

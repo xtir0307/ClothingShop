@@ -23,12 +23,12 @@ import javax.swing.table.DefaultTableModel;
  * @author xtir0
  */
 public class Home extends javax.swing.JFrame {
-DecimalFormat df = new DecimalFormat("#");
-    public SQLHandler sqlHandler = new SQLHandler();
-    public DefaultTableModel tableModelProducts = new DefaultTableModel();
-    private int id_product, id_customer;
-    private String username;
-    private int quantity = 0;
+DecimalFormat df55 = new DecimalFormat("#");
+    public SQLHandler sqlHandler55 = new SQLHandler();
+    public DefaultTableModel tableModelProducts55 = new DefaultTableModel();
+    private int id_product55, id_customer55;
+    private String username55;
+    private int quantity55 = 0;
 
     /**
      * Creates new form Home
@@ -36,37 +36,37 @@ DecimalFormat df = new DecimalFormat("#");
     public Home() {
         initComponents();
         setTableProduct();
-        if (id_customer == 0) {
+        if (id_customer55 == 0) {
             btn_logout.setText("Đăng nhập");
         } else {
             btn_logout.setText("Đăng xuất");
         }
-        btn_buy.setVisible(false);
+        btn_buy55.setVisible(false);
 
     }
 
-    public Home(int id_customer) {
+    public Home(int id_customer55) {
         initComponents();
         setTableProduct();
-        this.id_customer = id_customer;
-        if (id_customer == 0) {
+        this.id_customer55 = id_customer55;
+        if (id_customer55 == 0) {
             btn_logout.setText("Đăng nhập");
         } else {
             btn_logout.setText("Đăng xuất");
         }
-        btn_buy.setVisible(false);
+        btn_buy55.setVisible(false);
 
     }
 
     public void showDataProducts() {
         try {
-            ResultSet rs = sqlHandler.getDataProducts();
+            ResultSet rs = sqlHandler55.getDataProducts();
             int i = 1;
             while (rs.next()) {
                 Object[] rows = {
-                    i, rs.getString("name_product"), rs.getString("type_product"), df.format(rs.getDouble("price")), rs.getInt("quantity"), rs.getInt("id_product")
+                    i, rs.getString("name_product"), rs.getString("type_product"), df55.format(rs.getDouble("price")), rs.getInt("quantity"), rs.getInt("id_product")
                 };
-                tableModelProducts.addRow(rows);
+                tableModelProducts55.addRow(rows);
                 i++;
             }
         } catch (Exception e) {
@@ -87,31 +87,31 @@ DecimalFormat df = new DecimalFormat("#");
         String columns[] = {
             "STT", "Tên sản phẩm", "Loại", "Giá", "Số lượng còn", "id"
         };
-        tableModelProducts.setColumnIdentifiers(columns);
-        tbl_products.setModel(tableModelProducts);
-        hideColumn(tbl_products, 5);
+        tableModelProducts55.setColumnIdentifiers(columns);
+        tbl_products55.setModel(tableModelProducts55);
+        hideColumn(tbl_products55, 5);
         showDataProducts();
     }
 
     public ImageIcon ResizeImage(String ImagePath) {
         ImageIcon MyImage = new ImageIcon(ImagePath);
         Image img = MyImage.getImage();
-        Image newImg = img.getScaledInstance(lab_imgproduct.getWidth(), lab_imgproduct.getHeight(), Image.SCALE_SMOOTH);
+        Image newImg = img.getScaledInstance(lab_imgproduct55.getWidth(), lab_imgproduct55.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon image = new ImageIcon(newImg);
         return image;
     }
 
     public void setLabelProduct() {
         try {
-            ResultSet rs = sqlHandler.getDataIdProductId(id_product);
+            ResultSet rs = sqlHandler55.getDataIdProductId(id_product55);
             while (rs.next()) {
-                lab_nameproduct1.setText(rs.getString("name_product"));
-                lab_type1.setText(rs.getString("type_product"));
-                lab_fabric1.setText(rs.getString("fabric"));
-                lab_madein1.setText(rs.getString("madein"));
-                lab_quantity1.setText(rs.getString("quantity"));
-                lab_price1.setText(String.valueOf(df.format(rs.getDouble("price"))));
-                lab_imgproduct.setIcon(ResizeImage(rs.getString("urlimg")));
+                lab_nameproduct55.setText(rs.getString("name_product"));
+                lab_type55.setText(rs.getString("type_product"));
+                lab_fabric55.setText(rs.getString("fabric"));
+                lab_madein55.setText(rs.getString("madein"));
+                lab_quantity55.setText(rs.getString("quantity"));
+                lab_price55.setText(String.valueOf(df55.format(rs.getDouble("price"))));
+                lab_imgproduct55.setIcon(ResizeImage(rs.getString("urlimg")));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,8 +131,8 @@ DecimalFormat df = new DecimalFormat("#");
         dialog_quantity = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        spinner_quantity = new javax.swing.JSpinner();
-        btn_ok = new javax.swing.JButton();
+        spinner_quantity55 = new javax.swing.JSpinner();
+        btn_ok55 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lab_nameproduct = new javax.swing.JLabel();
@@ -141,28 +141,28 @@ DecimalFormat df = new DecimalFormat("#");
         lab_madein = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        lab_imgproduct = new javax.swing.JLabel();
+        lab_imgproduct55 = new javax.swing.JLabel();
         lab_fabric = new javax.swing.JLabel();
         lab_quantity = new javax.swing.JLabel();
-        lab_quantity1 = new javax.swing.JLabel();
-        lab_nameproduct1 = new javax.swing.JLabel();
-        lab_type1 = new javax.swing.JLabel();
-        lab_madein1 = new javax.swing.JLabel();
-        lab_fabric1 = new javax.swing.JLabel();
+        lab_quantity55 = new javax.swing.JLabel();
+        lab_nameproduct55 = new javax.swing.JLabel();
+        lab_type55 = new javax.swing.JLabel();
+        lab_madein55 = new javax.swing.JLabel();
+        lab_fabric55 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        lab_price1 = new javax.swing.JLabel();
+        lab_price55 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_products = new javax.swing.JTable();
+        tbl_products55 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        btn_buy = new javax.swing.JButton();
-        btn_addcart = new javax.swing.JButton();
+        btn_buy55 = new javax.swing.JButton();
+        btn_addcart55 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         btn_logout = new javax.swing.JButton();
-        btn_cart = new javax.swing.JButton();
-        btn_profile = new javax.swing.JButton();
+        btn_cart55 = new javax.swing.JButton();
+        btn_profile55 = new javax.swing.JButton();
 
         dialog_quantity.setTitle("Số lượng thêm");
         dialog_quantity.setMinimumSize(new java.awt.Dimension(315, 150));
@@ -179,7 +179,7 @@ DecimalFormat df = new DecimalFormat("#");
         gridBagConstraints.insets = new java.awt.Insets(42, 60, 0, 0);
         jPanel5.add(jLabel3, gridBagConstraints);
 
-        spinner_quantity.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
+        spinner_quantity55.setModel(new javax.swing.SpinnerNumberModel(0, 0, 1000, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -187,12 +187,12 @@ DecimalFormat df = new DecimalFormat("#");
         gridBagConstraints.ipadx = -25;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(42, 18, 0, 0);
-        jPanel5.add(spinner_quantity, gridBagConstraints);
+        jPanel5.add(spinner_quantity55, gridBagConstraints);
 
-        btn_ok.setText("Ok");
-        btn_ok.addActionListener(new java.awt.event.ActionListener() {
+        btn_ok55.setText("Ok");
+        btn_ok55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_okActionPerformed(evt);
+                btn_ok55ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -201,7 +201,7 @@ DecimalFormat df = new DecimalFormat("#");
         gridBagConstraints.gridheight = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(41, 18, 36, 50);
-        jPanel5.add(btn_ok, gridBagConstraints);
+        jPanel5.add(btn_ok55, gridBagConstraints);
 
         javax.swing.GroupLayout dialog_quantityLayout = new javax.swing.GroupLayout(dialog_quantity.getContentPane());
         dialog_quantity.getContentPane().setLayout(dialog_quantityLayout);
@@ -242,7 +242,7 @@ DecimalFormat df = new DecimalFormat("#");
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Hình ảnh sản phẩm:");
 
-        lab_imgproduct.setText(" ");
+        lab_imgproduct55.setText(" ");
 
         lab_fabric.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lab_fabric.setText(" ");
@@ -250,26 +250,26 @@ DecimalFormat df = new DecimalFormat("#");
         lab_quantity.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lab_quantity.setText("Số lượng còn: ");
 
-        lab_quantity1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_quantity1.setText("        ");
+        lab_quantity55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_quantity55.setText("        ");
 
-        lab_nameproduct1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_nameproduct1.setText("        ");
+        lab_nameproduct55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_nameproduct55.setText("        ");
 
-        lab_type1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_type1.setText("        ");
+        lab_type55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_type55.setText("        ");
 
-        lab_madein1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_madein1.setText("        ");
+        lab_madein55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_madein55.setText("        ");
 
-        lab_fabric1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_fabric1.setText("        ");
+        lab_fabric55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_fabric55.setText("        ");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel10.setText("        ");
 
-        lab_price1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_price1.setText("        ");
+        lab_price55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_price55.setText("        ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -286,11 +286,11 @@ DecimalFormat df = new DecimalFormat("#");
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel7)
                                         .addGap(18, 18, 18)
-                                        .addComponent(lab_fabric1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(lab_fabric55, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(lab_quantity)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(lab_quantity1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(lab_quantity55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lab_fabric)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -298,24 +298,24 @@ DecimalFormat df = new DecimalFormat("#");
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(lab_price)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lab_price1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lab_price55, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 75, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lab_nameproduct)
                         .addGap(18, 18, 18)
-                        .addComponent(lab_nameproduct1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lab_nameproduct55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lab_type)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lab_type1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lab_type55, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(lab_madein)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lab_madein1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lab_madein55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
-                .addComponent(lab_imgproduct, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lab_imgproduct55, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -326,31 +326,31 @@ DecimalFormat df = new DecimalFormat("#");
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lab_nameproduct)
-                    .addComponent(lab_nameproduct1))
+                    .addComponent(lab_nameproduct55))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lab_type)
                     .addComponent(lab_madein)
-                    .addComponent(lab_type1)
-                    .addComponent(lab_madein1))
+                    .addComponent(lab_type55)
+                    .addComponent(lab_madein55))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(lab_fabric)
-                    .addComponent(lab_fabric1))
+                    .addComponent(lab_fabric55))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lab_quantity)
-                    .addComponent(lab_quantity1)
+                    .addComponent(lab_quantity55)
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lab_price)
-                    .addComponent(lab_price1))
+                    .addComponent(lab_price55))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lab_imgproduct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lab_imgproduct55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -360,8 +360,8 @@ DecimalFormat df = new DecimalFormat("#");
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sản phẩm");
 
-        tbl_products.setBackground(new java.awt.Color(153, 255, 255));
-        tbl_products.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_products55.setBackground(new java.awt.Color(153, 255, 255));
+        tbl_products55.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -372,12 +372,12 @@ DecimalFormat df = new DecimalFormat("#");
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tbl_products.addMouseListener(new java.awt.event.MouseAdapter() {
+        tbl_products55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbl_productsMouseClicked(evt);
+                tbl_products55MouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tbl_products);
+        jScrollPane1.setViewportView(tbl_products55);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -396,21 +396,21 @@ DecimalFormat df = new DecimalFormat("#");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 153));
 
-        btn_buy.setBackground(new java.awt.Color(255, 153, 51));
-        btn_buy.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_buy.setText("Mua");
-        btn_buy.addActionListener(new java.awt.event.ActionListener() {
+        btn_buy55.setBackground(new java.awt.Color(255, 153, 51));
+        btn_buy55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_buy55.setText("Mua");
+        btn_buy55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buyActionPerformed(evt);
+                btn_buy55ActionPerformed(evt);
             }
         });
 
-        btn_addcart.setBackground(new java.awt.Color(102, 255, 102));
-        btn_addcart.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_addcart.setText("Thêm vào giỏ hàng");
-        btn_addcart.addActionListener(new java.awt.event.ActionListener() {
+        btn_addcart55.setBackground(new java.awt.Color(102, 255, 102));
+        btn_addcart55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_addcart55.setText("Thêm vào giỏ hàng");
+        btn_addcart55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_addcartActionPerformed(evt);
+                btn_addcart55ActionPerformed(evt);
             }
         });
 
@@ -420,9 +420,9 @@ DecimalFormat df = new DecimalFormat("#");
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
-                .addComponent(btn_addcart)
+                .addComponent(btn_addcart55)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_buy, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_buy55, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
         );
         jPanel3Layout.setVerticalGroup(
@@ -430,8 +430,8 @@ DecimalFormat df = new DecimalFormat("#");
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_addcart)
-                    .addComponent(btn_buy))
+                    .addComponent(btn_addcart55)
+                    .addComponent(btn_buy55))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -450,20 +450,20 @@ DecimalFormat df = new DecimalFormat("#");
             }
         });
 
-        btn_cart.setBackground(new java.awt.Color(204, 255, 0));
-        btn_cart.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_cart.setText("Giỏ hàng của tôi");
-        btn_cart.addActionListener(new java.awt.event.ActionListener() {
+        btn_cart55.setBackground(new java.awt.Color(204, 255, 0));
+        btn_cart55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_cart55.setText("Giỏ hàng của tôi");
+        btn_cart55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_cartActionPerformed(evt);
+                btn_cart55ActionPerformed(evt);
             }
         });
 
-        btn_profile.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_profile.setText("Thông tin cá nhân");
-        btn_profile.addActionListener(new java.awt.event.ActionListener() {
+        btn_profile55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_profile55.setText("Thông tin cá nhân");
+        btn_profile55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_profileActionPerformed(evt);
+                btn_profile55ActionPerformed(evt);
             }
         });
 
@@ -473,9 +473,9 @@ DecimalFormat df = new DecimalFormat("#");
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_cart)
+                .addComponent(btn_cart55)
                 .addGap(18, 18, 18)
-                .addComponent(btn_profile)
+                .addComponent(btn_profile55)
                 .addGap(18, 18, 18)
                 .addComponent(btn_logout)
                 .addContainerGap())
@@ -487,9 +487,9 @@ DecimalFormat df = new DecimalFormat("#");
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_cart)
+                    .addComponent(btn_cart55)
                     .addComponent(btn_logout)
-                    .addComponent(btn_profile)))
+                    .addComponent(btn_profile55)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -521,17 +521,17 @@ DecimalFormat df = new DecimalFormat("#");
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tbl_productsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_productsMouseClicked
+    private void tbl_products55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_products55MouseClicked
         // TODO add your handling code here:
-        int row = tbl_products.getSelectedRow();
-        id_product = Integer.valueOf(tbl_products.getModel().getValueAt(row, 5).toString());
+        int row = tbl_products55.getSelectedRow();
+        id_product55 = Integer.valueOf(tbl_products55.getModel().getValueAt(row, 5).toString());
         setLabelProduct();
-    }//GEN-LAST:event_tbl_productsMouseClicked
+    }//GEN-LAST:event_tbl_products55MouseClicked
 
     private void btn_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_logoutActionPerformed
         // TODO add your handling code here:
-        if (username != null) {
-            username = null;
+        if (username55 != null) {
+            username55 = null;
             this.dispose();
             new Login().setVisible(true);
         } else {
@@ -540,34 +540,34 @@ DecimalFormat df = new DecimalFormat("#");
         }
     }//GEN-LAST:event_btn_logoutActionPerformed
 
-    private void btn_cartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cartActionPerformed
+    private void btn_cart55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cart55ActionPerformed
         // TODO add your handling code here:
-        if (id_customer == 0) {
+        if (id_customer55 == 0) {
             JOptionPane.showMessageDialog(rootPane, "Chưa Đăng nhập!!!");
         } else {
             this.dispose();
-            new Cart(id_customer).setVisible(true);
+            new Cart(id_customer55).setVisible(true);
         }
 
-    }//GEN-LAST:event_btn_cartActionPerformed
+    }//GEN-LAST:event_btn_cart55ActionPerformed
 
-    private void btn_profileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_profileActionPerformed
+    private void btn_profile55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_profile55ActionPerformed
         // TODO add your handling code here:
-        if (id_customer == 0) {
+        if (id_customer55 == 0) {
             JOptionPane.showMessageDialog(rootPane, "Chưa Đăng nhập!!!");
         } else {
             this.dispose();
-            new Information(id_customer).setVisible(true);
+            new Information(id_customer55).setVisible(true);
         }
 
-    }//GEN-LAST:event_btn_profileActionPerformed
+    }//GEN-LAST:event_btn_profile55ActionPerformed
 
-    private void btn_addcartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addcartActionPerformed
+    private void btn_addcart55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addcart55ActionPerformed
         // TODO add your handling code here:
-        if (id_customer == 0) {
+        if (id_customer55 == 0) {
             JOptionPane.showMessageDialog(rootPane, "Chưa Đăng nhập!!!");
         } else {
-            if (id_product == 0) {
+            if (id_product55 == 0) {
                 JOptionPane.showMessageDialog(rootPane, "Chưa chọn sản phẩm!!!");
             } else {
                 dialog_quantity.setVisible(true);
@@ -577,24 +577,24 @@ DecimalFormat df = new DecimalFormat("#");
         }
 
 
-    }//GEN-LAST:event_btn_addcartActionPerformed
+    }//GEN-LAST:event_btn_addcart55ActionPerformed
 
-    private void btn_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_okActionPerformed
+    private void btn_ok55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ok55ActionPerformed
         // TODO add your handling code here:
-        quantity = (int) spinner_quantity.getValue();
-        sqlHandler.addProducttoCart(id_customer, id_product, quantity);
+        quantity55 = (int) spinner_quantity55.getValue();
+        sqlHandler55.addProducttoCart(id_customer55, id_product55, quantity55);
         dialog_quantity.setVisible(false);
-    }//GEN-LAST:event_btn_okActionPerformed
+    }//GEN-LAST:event_btn_ok55ActionPerformed
 
-    private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buyActionPerformed
+    private void btn_buy55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buy55ActionPerformed
         // TODO add your handling code here:
-        if (id_customer == 0) {
+        if (id_customer55 == 0) {
             JOptionPane.showMessageDialog(rootPane, "Chưa Đăng nhập!!!");
         } else {
 //            this.dispose();
-//            new Information(id_customer).setVisible(true);
+//            new Information(id_customer55).setVisible(true);
         }
-    }//GEN-LAST:event_btn_buyActionPerformed
+    }//GEN-LAST:event_btn_buy55ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -632,12 +632,12 @@ DecimalFormat df = new DecimalFormat("#");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_addcart;
-    private javax.swing.JButton btn_buy;
-    private javax.swing.JButton btn_cart;
+    private javax.swing.JButton btn_addcart55;
+    private javax.swing.JButton btn_buy55;
+    private javax.swing.JButton btn_cart55;
     private javax.swing.JButton btn_logout;
-    private javax.swing.JButton btn_ok;
-    private javax.swing.JButton btn_profile;
+    private javax.swing.JButton btn_ok55;
+    private javax.swing.JButton btn_profile55;
     private javax.swing.JDialog dialog_quantity;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -653,19 +653,19 @@ DecimalFormat df = new DecimalFormat("#");
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lab_fabric;
-    private javax.swing.JLabel lab_fabric1;
-    private javax.swing.JLabel lab_imgproduct;
+    private javax.swing.JLabel lab_fabric55;
+    private javax.swing.JLabel lab_imgproduct55;
     private javax.swing.JLabel lab_madein;
-    private javax.swing.JLabel lab_madein1;
+    private javax.swing.JLabel lab_madein55;
     private javax.swing.JLabel lab_nameproduct;
-    private javax.swing.JLabel lab_nameproduct1;
+    private javax.swing.JLabel lab_nameproduct55;
     private javax.swing.JLabel lab_price;
-    private javax.swing.JLabel lab_price1;
+    private javax.swing.JLabel lab_price55;
     private javax.swing.JLabel lab_quantity;
-    private javax.swing.JLabel lab_quantity1;
+    private javax.swing.JLabel lab_quantity55;
     private javax.swing.JLabel lab_type;
-    private javax.swing.JLabel lab_type1;
-    private javax.swing.JSpinner spinner_quantity;
-    private javax.swing.JTable tbl_products;
+    private javax.swing.JLabel lab_type55;
+    private javax.swing.JSpinner spinner_quantity55;
+    private javax.swing.JTable tbl_products55;
     // End of variables declaration//GEN-END:variables
 }
