@@ -17,14 +17,15 @@ import javax.swing.table.DefaultTableModel;
  * @author xtir0
  */
 public class Cart extends javax.swing.JFrame {
-    DecimalFormat df = new DecimalFormat("#");
-    public final SQLHandler sqlHandler = new SQLHandler();
-    public DefaultTableModel tableModelProducts = new DefaultTableModel();
-//    public String username;
-    public int id_customer;
-    private String name_product, type_product, fabric, madein, urlimg;
-    private int quantity, id_product, id_cart;
-    private Double price;
+
+    DecimalFormat df55 = new DecimalFormat("#");
+    public final SQLHandler sqlHandler55 = new SQLHandler();
+    public DefaultTableModel tableModelProducts55
+            = new DefaultTableModel();
+    public int id_customer55;
+    private String name_product55, type_product55, fabric55, madein55, urlimg55;
+    private int quantity55, id_product55, id_cart55;
+    private Double price55;
 
     /**
      * Creates new form Cart1
@@ -34,8 +35,8 @@ public class Cart extends javax.swing.JFrame {
         setTableProduct();
     }
 
-    public Cart(int id_customer) {
-        this.id_customer = id_customer;
+    public Cart(int id_customer55) {
+        this.id_customer55 = id_customer55;
         initComponents();
         setTableProduct();
 //        lab_username.setText(username);
@@ -45,22 +46,25 @@ public class Cart extends javax.swing.JFrame {
         String columns[] = {
             "STT", "Tên sản phẩm", "Loại", "Giá", "Số lượng còn", "id", "Số lượng đặt", "id"
         };
-        tableModelProducts.setColumnIdentifiers(columns);
-        table_products.setModel(tableModelProducts);
-        hideColumn(table_products, 5);
-        hideColumn(table_products, 7);
+        tableModelProducts55
+                .setColumnIdentifiers(columns);
+        table_products55.setModel(tableModelProducts55
+        );
+        hideColumn(table_products55, 5);
+        hideColumn(table_products55, 7);
         showDataProducts();
     }
 
     public void showDataProducts() {
         try {
-            ResultSet rs = sqlHandler.getDataProductsCart(id_customer);
+            ResultSet rs = sqlHandler55.getDataProductsCart(id_customer55);
             int i = 1;
             while (rs.next()) {
                 Object[] rows = {
-                    i, rs.getString("name_product"), rs.getString("type_product"), df.format(rs.getDouble("price")), rs.getInt("quantity"), rs.getInt("id_product"), rs.getInt("quantity_orders"),  rs.getInt("id_cart")
+                    i, rs.getString("name_product"), rs.getString("type_product"), df55.format(rs.getDouble("price")), rs.getInt("quantity"), rs.getInt("id_product"), rs.getInt("quantity_orders"), rs.getInt("id_cart")
                 };
-                tableModelProducts.addRow(rows);
+                tableModelProducts55
+                        .addRow(rows);
                 i++;
             }
         } catch (Exception e) {
@@ -78,16 +82,16 @@ public class Cart extends javax.swing.JFrame {
 
     public void getDataSQLProduct() {
         try {
-            ResultSet rs = sqlHandler.getDataIdProductId(id_product);
+            ResultSet rs = sqlHandler55.getDataIdProductId(id_product55);
             while (rs.next()) {
 
-                name_product = rs.getString("name_product");
-                type_product = rs.getString("type_product");
-                fabric = rs.getString("fabric");
-                madein = rs.getString("madein");
-                quantity = rs.getInt("quantity");
-                price = rs.getDouble("price");
-                urlimg = rs.getString("urlimg");
+                name_product55 = rs.getString("name_product");
+                type_product55 = rs.getString("type_product");
+                fabric55 = rs.getString("fabric");
+                madein55 = rs.getString("madein");
+                quantity55 = rs.getInt("quantity");
+                price55 = rs.getDouble("price");
+                urlimg55 = rs.getString("urlimg");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,49 +99,49 @@ public class Cart extends javax.swing.JFrame {
     }
 
     public void getDataProduct() {
-        name_product = lab_nameproduct.getText();
-        type_product = lab_type.getText();
-        fabric = lab_fabric.getText();
-        madein = lab_madein.getText();
-        quantity = Integer.valueOf(lab_quantity.getText());
-        price = Double.valueOf(lab_price.getText());
+        name_product55 = lab_nameproduct55.getText();
+        type_product55 = lab_type55.getText();
+        fabric55 = lab_fabric55.getText();
+        madein55 = lab_madein55.getText();
+        quantity55 = Integer.valueOf(lab_quantity55.getText());
+        price55 = Double.valueOf(lab_price55.getText());
     }
 
     public void setDataProduct() {
-        lab_nameproduct.setText(name_product);
-        lab_type.setText(type_product);
-        lab_madein.setText(madein);
-        lab_fabric.setText(fabric);
-        lab_quantity.setText(String.valueOf(quantity));
-        lab_price.setText(df.format(price));
-        lab_img.setIcon(ResizeImage(urlimg));
+        lab_nameproduct55.setText(name_product55);
+        lab_type55.setText(type_product55);
+        lab_madein55.setText(madein55);
+        lab_fabric55.setText(fabric55);
+        lab_quantity55.setText(String.valueOf(quantity55));
+        lab_price55.setText(df55.format(price55));
+        lab_img55.setIcon(ResizeImage(urlimg55));
     }
 
     public ImageIcon ResizeImage(String ImagePath) {
         ImageIcon MyImage = new ImageIcon(ImagePath);
         Image img = MyImage.getImage();
-        Image newImg = img.getScaledInstance(lab_img.getWidth(), lab_img.getHeight(), Image.SCALE_SMOOTH);
+        Image newImg = img.getScaledInstance(lab_img55.getWidth(), lab_img55.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon image = new ImageIcon(newImg);
         return image;
     }
-    
+
     public void clearData(DefaultTableModel dftableModel) {
         int n = dftableModel.getRowCount() - 1;
         for (int i = n; i >= 0; i--) {
             dftableModel.removeRow(i);
         }
     }
-    
+
     public void clearDataInput() {
-        lab_nameproduct.setText("");
-        lab_type.setText("");
-        lab_madein.setText("");
-        lab_fabric.setText("");
-        lab_quantity.setText("");
-        lab_price.setText("");
-        lab_img.setIcon(null);
+        lab_nameproduct55.setText("");
+        lab_type55.setText("");
+        lab_madein55.setText("");
+        lab_fabric55.setText("");
+        lab_quantity55.setText("");
+        lab_price55.setText("");
+        lab_img55.setIcon(null);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -150,7 +154,7 @@ public class Cart extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table_products = new javax.swing.JTable();
+        table_products55 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -160,17 +164,17 @@ public class Cart extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        lab_nameproduct = new javax.swing.JLabel();
-        lab_type = new javax.swing.JLabel();
-        lab_fabric = new javax.swing.JLabel();
-        lab_quantity = new javax.swing.JLabel();
-        lab_price = new javax.swing.JLabel();
-        lab_madein = new javax.swing.JLabel();
-        lab_img = new javax.swing.JLabel();
-        btn_delete = new javax.swing.JButton();
+        lab_nameproduct55 = new javax.swing.JLabel();
+        lab_type55 = new javax.swing.JLabel();
+        lab_fabric55 = new javax.swing.JLabel();
+        lab_quantity55 = new javax.swing.JLabel();
+        lab_price55 = new javax.swing.JLabel();
+        lab_madein55 = new javax.swing.JLabel();
+        lab_img55 = new javax.swing.JLabel();
+        btn_delete55 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btn_pay55 = new javax.swing.JButton();
+        btn_back55 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lab_username = new javax.swing.JLabel();
 
@@ -183,8 +187,8 @@ public class Cart extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Sản phẩm");
 
-        table_products.setBackground(new java.awt.Color(255, 255, 153));
-        table_products.setModel(new javax.swing.table.DefaultTableModel(
+        table_products55.setBackground(new java.awt.Color(255, 255, 153));
+        table_products55.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -195,12 +199,12 @@ public class Cart extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        table_products.addMouseListener(new java.awt.event.MouseAdapter() {
+        table_products55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                table_productsMouseClicked(evt);
+                table_products55MouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(table_products);
+        jScrollPane1.setViewportView(table_products55);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -244,33 +248,33 @@ public class Cart extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Nhập từ: ");
 
-        lab_nameproduct.setDisplayedMnemonic('G');
-        lab_nameproduct.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_nameproduct.setText(" ");
+        lab_nameproduct55.setDisplayedMnemonic('G');
+        lab_nameproduct55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_nameproduct55.setText(" ");
 
-        lab_type.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_type.setText(" ");
+        lab_type55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_type55.setText(" ");
 
-        lab_fabric.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_fabric.setText(" ");
+        lab_fabric55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_fabric55.setText(" ");
 
-        lab_quantity.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_quantity.setText(" ");
+        lab_quantity55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_quantity55.setText(" ");
 
-        lab_price.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_price.setText(" ");
+        lab_price55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_price55.setText(" ");
 
-        lab_madein.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lab_madein.setText(" ");
+        lab_madein55.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lab_madein55.setText(" ");
 
-        lab_img.setText(" ");
+        lab_img55.setText(" ");
 
-        btn_delete.setBackground(new java.awt.Color(255, 0, 0));
-        btn_delete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_delete.setText("Xóa");
-        btn_delete.addActionListener(new java.awt.event.ActionListener() {
+        btn_delete55.setBackground(new java.awt.Color(255, 0, 0));
+        btn_delete55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_delete55.setText("Xóa");
+        btn_delete55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_deleteActionPerformed(evt);
+                btn_delete55ActionPerformed(evt);
             }
         });
 
@@ -289,34 +293,34 @@ public class Cart extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lab_nameproduct, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lab_nameproduct55, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(7, 7, 7)
-                                .addComponent(lab_fabric, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lab_fabric55, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(7, 7, 7)
-                                .addComponent(lab_quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lab_quantity55, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
-                                .addComponent(lab_price, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lab_price55, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel9))
                         .addContainerGap(29, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(lab_img, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lab_img55, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_delete)
+                        .addComponent(btn_delete55)
                         .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(12, 12, 12)
-                        .addComponent(lab_type, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lab_type55, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(25, 25, 25)
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lab_madein, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lab_madein55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
@@ -325,56 +329,56 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lab_nameproduct)
+                    .addComponent(lab_nameproduct55)
                     .addComponent(jLabel4))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
-                            .addComponent(lab_type)
+                            .addComponent(lab_type55)
                             .addComponent(jLabel10))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(lab_fabric))
+                            .addComponent(lab_fabric55))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(lab_quantity))
+                            .addComponent(lab_quantity55))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
-                            .addComponent(lab_price))
+                            .addComponent(lab_price55))
                         .addGap(18, 18, 18)
                         .addComponent(jLabel9)
                         .addGap(7, 7, 7)
-                        .addComponent(lab_img, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                        .addComponent(lab_img55, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
                         .addGap(13, 13, 13))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lab_madein)
+                        .addComponent(lab_madein55)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_delete)
+                        .addComponent(btn_delete55)
                         .addContainerGap())))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 153));
 
-        jButton2.setBackground(new java.awt.Color(0, 255, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Thanh toán");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_pay55.setBackground(new java.awt.Color(0, 255, 0));
+        btn_pay55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_pay55.setText("Thanh toán");
+        btn_pay55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_pay55ActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Quay lại");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_back55.setBackground(new java.awt.Color(255, 255, 51));
+        btn_back55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_back55.setText("Quay lại");
+        btn_back55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_back55ActionPerformed(evt);
             }
         });
 
@@ -391,11 +395,11 @@ public class Cart extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(btn_back55)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lab_username, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2))
+                .addComponent(btn_pay55))
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
@@ -404,8 +408,8 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
+                    .addComponent(btn_pay55)
+                    .addComponent(btn_back55)
                     .addComponent(lab_username)))
         );
 
@@ -433,37 +437,38 @@ public class Cart extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_back55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_back55ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new Home(id_customer).setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new Home(id_customer55).setVisible(true);
+    }//GEN-LAST:event_btn_back55ActionPerformed
 
-    private void table_productsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_productsMouseClicked
+    private void table_products55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_products55MouseClicked
         // TODO add your handling code here:
-        int row = table_products.getSelectedRow();
-        id_product = Integer.valueOf(table_products.getModel().getValueAt(row, 5).toString());
-        id_cart = Integer.valueOf(table_products.getModel().getValueAt(row, 7).toString());
+        int row = table_products55.getSelectedRow();
+        id_product55 = Integer.valueOf(table_products55.getModel().getValueAt(row, 5).toString());
+        id_cart55 = Integer.valueOf(table_products55.getModel().getValueAt(row, 7).toString());
         getDataSQLProduct();
         setDataProduct();
-    }//GEN-LAST:event_table_productsMouseClicked
+    }//GEN-LAST:event_table_products55MouseClicked
 
-    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+    private void btn_delete55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete55ActionPerformed
         // TODO add your handling code here:
         try {
-            sqlHandler.deleteProductCart(id_cart);
-            clearData(tableModelProducts);
+            sqlHandler55.deleteProductCart(id_cart55);
+            clearData(tableModelProducts55
+            );
             clearDataInput();
             showDataProducts();
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_btn_deleteActionPerformed
+    }//GEN-LAST:event_btn_delete55ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_pay55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pay55ActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new Pay(id_customer).setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        new Pay(id_customer55).setVisible(true);
+    }//GEN-LAST:event_btn_pay55ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -502,9 +507,9 @@ public class Cart extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_delete;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btn_back55;
+    private javax.swing.JButton btn_delete55;
+    private javax.swing.JButton btn_pay55;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -519,14 +524,14 @@ public class Cart extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lab_fabric;
-    private javax.swing.JLabel lab_img;
-    private javax.swing.JLabel lab_madein;
-    private javax.swing.JLabel lab_nameproduct;
-    private javax.swing.JLabel lab_price;
-    private javax.swing.JLabel lab_quantity;
-    private javax.swing.JLabel lab_type;
+    private javax.swing.JLabel lab_fabric55;
+    private javax.swing.JLabel lab_img55;
+    private javax.swing.JLabel lab_madein55;
+    private javax.swing.JLabel lab_nameproduct55;
+    private javax.swing.JLabel lab_price55;
+    private javax.swing.JLabel lab_quantity55;
+    private javax.swing.JLabel lab_type55;
     private javax.swing.JLabel lab_username;
-    private javax.swing.JTable table_products;
+    private javax.swing.JTable table_products55;
     // End of variables declaration//GEN-END:variables
 }
