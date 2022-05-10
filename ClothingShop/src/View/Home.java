@@ -169,7 +169,7 @@ public class Home extends javax.swing.JFrame {
         dialog_quantity.setTitle("Số lượng thêm");
         dialog_quantity.setMinimumSize(new java.awt.Dimension(315, 150));
 
-        jPanel5.setBackground(new java.awt.Color(153, 255, 51));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new java.awt.GridBagLayout());
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -191,6 +191,7 @@ public class Home extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(42, 18, 0, 0);
         jPanel5.add(spinner_quantity55, gridBagConstraints);
 
+        btn_ok55.setBackground(new java.awt.Color(51, 255, 0));
         btn_ok55.setText("Ok");
         btn_ok55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -218,8 +219,13 @@ public class Home extends javax.swing.JFrame {
 
         dialog_quantitypay.setMinimumSize(new java.awt.Dimension(315, 150));
 
-        jLabel4.setText("Nhập số lượng mua: ");
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Số lượng: ");
+
+        btn_okpay55.setBackground(new java.awt.Color(51, 255, 0));
+        btn_okpay55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_okpay55.setText("Ok");
         btn_okpay55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,13 +238,13 @@ public class Home extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(spinner_quantitypay55, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(33, 33, 33)
                 .addComponent(btn_okpay55)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGap(43, 43, 43))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,7 +254,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(spinner_quantitypay55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(btn_okpay55))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout dialog_quantitypayLayout = new javax.swing.GroupLayout(dialog_quantitypay.getContentPane());
