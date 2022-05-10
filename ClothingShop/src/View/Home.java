@@ -37,8 +37,12 @@ public class Home extends javax.swing.JFrame {
         setTableProduct();
         if (id_customer55 == 0) {
             btn_logout.setText("Đăng nhập");
+            ImageIcon icon = new ImageIcon("D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\enter.png");
+            btn_logout.setIcon(icon);
         } else {
             btn_logout.setText("Đăng xuất");
+            ImageIcon icon = new ImageIcon("D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\logout.png");
+            btn_logout.setIcon(icon);
         }
 
     }
@@ -192,6 +196,7 @@ public class Home extends javax.swing.JFrame {
         jPanel5.add(spinner_quantity55, gridBagConstraints);
 
         btn_ok55.setBackground(new java.awt.Color(51, 255, 0));
+        btn_ok55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btn_ok55.setText("Ok");
         btn_ok55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +222,7 @@ public class Home extends javax.swing.JFrame {
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        dialog_quantitypay.setTitle("Số lượng mua");
         dialog_quantitypay.setMinimumSize(new java.awt.Dimension(315, 150));
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -272,7 +278,7 @@ public class Home extends javax.swing.JFrame {
         setTitle("Trang chủ");
         setSize(new java.awt.Dimension(930, 600));
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -452,6 +458,7 @@ public class Home extends javax.swing.JFrame {
 
         btn_buy55.setBackground(new java.awt.Color(255, 153, 51));
         btn_buy55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_buy55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/buy.png"))); // NOI18N
         btn_buy55.setText("Mua");
         btn_buy55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -461,6 +468,7 @@ public class Home extends javax.swing.JFrame {
 
         btn_addcart55.setBackground(new java.awt.Color(102, 255, 102));
         btn_addcart55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_addcart55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/add-to-cart.png"))); // NOI18N
         btn_addcart55.setText("Thêm vào giỏ hàng");
         btn_addcart55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -486,7 +494,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_addcart55)
                     .addComponent(btn_buy55))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(204, 255, 204));
@@ -497,6 +505,7 @@ public class Home extends javax.swing.JFrame {
 
         btn_logout.setBackground(new java.awt.Color(255, 51, 51));
         btn_logout.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logout.png"))); // NOI18N
         btn_logout.setText("Đăng xuất");
         btn_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -506,6 +515,7 @@ public class Home extends javax.swing.JFrame {
 
         btn_cart55.setBackground(new java.awt.Color(204, 255, 0));
         btn_cart55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_cart55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/shopping-cart.png"))); // NOI18N
         btn_cart55.setText("Giỏ hàng của tôi");
         btn_cart55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -514,6 +524,7 @@ public class Home extends javax.swing.JFrame {
         });
 
         btn_profile55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_profile55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/user.png"))); // NOI18N
         btn_profile55.setText("Thông tin cá nhân");
         btn_profile55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -635,7 +646,14 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         quantity55 = (int) spinner_quantity55.getValue();
         sqlHandler55.addProducttoCart(id_customer55, id_product55, quantity55);
-        dialog_quantity.setVisible(false);
+        if (quantity55 <= 0) {
+            JOptionPane.showMessageDialog(rootPane, "Số lượng phải khác 0!!!");
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Đã thêm vào giỏ hàng!!!");
+            dialog_quantity.dispose();
+            dialog_quantity.setVisible(false);
+        }
+
     }//GEN-LAST:event_btn_ok55ActionPerformed
 
     private void btn_buy55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buy55ActionPerformed
@@ -656,9 +674,15 @@ public class Home extends javax.swing.JFrame {
     private void btn_okpay55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_okpay55ActionPerformed
         // TODO add your handling code here:
         quantitypay55 = (int) spinner_quantitypay55.getValue();
-        dialog_quantity.setVisible(false);
-        this.dispose();
-        new Pay(id_customer55, id_product55, quantitypay55).setVisible(true);
+        if (quantitypay55 <= 0) {
+            JOptionPane.showMessageDialog(rootPane, "Số lượng phải khác 0!!!");
+        } else {
+            dialog_quantity.setVisible(false);
+            dialog_quantitypay.dispose();
+            this.dispose();
+            new Pay(id_customer55, id_product55, quantitypay55).setVisible(true);
+        }
+
     }//GEN-LAST:event_btn_okpay55ActionPerformed
 
     /**
