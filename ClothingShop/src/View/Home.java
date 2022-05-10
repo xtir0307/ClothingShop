@@ -4,8 +4,6 @@ package View;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
-
 import Model.SQLHandler;
 import View.Cart;
 import View.Information;
@@ -23,12 +21,13 @@ import javax.swing.table.DefaultTableModel;
  * @author xtir0
  */
 public class Home extends javax.swing.JFrame {
-DecimalFormat df55 = new DecimalFormat("#");
+
+    DecimalFormat df55 = new DecimalFormat("#");
     public SQLHandler sqlHandler55 = new SQLHandler();
     public DefaultTableModel tableModelProducts55 = new DefaultTableModel();
     private int id_product55, id_customer55;
     private String username55;
-    private int quantity55 = 0;
+    private int quantity55 = 0, quantitypay55 = 0;
 
     /**
      * Creates new form Home
@@ -41,7 +40,6 @@ DecimalFormat df55 = new DecimalFormat("#");
         } else {
             btn_logout.setText("Đăng xuất");
         }
-        btn_buy55.setVisible(false);
 
     }
 
@@ -54,7 +52,6 @@ DecimalFormat df55 = new DecimalFormat("#");
         } else {
             btn_logout.setText("Đăng xuất");
         }
-        btn_buy55.setVisible(false);
 
     }
 
@@ -133,6 +130,11 @@ DecimalFormat df55 = new DecimalFormat("#");
         jLabel3 = new javax.swing.JLabel();
         spinner_quantity55 = new javax.swing.JSpinner();
         btn_ok55 = new javax.swing.JButton();
+        dialog_quantitypay = new javax.swing.JDialog();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        spinner_quantitypay55 = new javax.swing.JSpinner();
+        btn_okpay55 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lab_nameproduct = new javax.swing.JLabel();
@@ -212,6 +214,52 @@ DecimalFormat df55 = new DecimalFormat("#");
         dialog_quantityLayout.setVerticalGroup(
             dialog_quantityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        dialog_quantitypay.setMinimumSize(new java.awt.Dimension(315, 150));
+
+        jLabel4.setText("Nhập số lượng mua: ");
+
+        btn_okpay55.setText("Ok");
+        btn_okpay55.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_okpay55ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(spinner_quantitypay55, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btn_okpay55)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(spinner_quantitypay55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(btn_okpay55))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout dialog_quantitypayLayout = new javax.swing.GroupLayout(dialog_quantitypay.getContentPane());
+        dialog_quantitypay.getContentPane().setLayout(dialog_quantitypayLayout);
+        dialog_quantitypayLayout.setHorizontalGroup(
+            dialog_quantitypayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dialog_quantitypayLayout.setVerticalGroup(
+            dialog_quantitypayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -575,8 +623,6 @@ DecimalFormat df55 = new DecimalFormat("#");
             }
 
         }
-
-
     }//GEN-LAST:event_btn_addcart55ActionPerformed
 
     private void btn_ok55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ok55ActionPerformed
@@ -591,10 +637,23 @@ DecimalFormat df55 = new DecimalFormat("#");
         if (id_customer55 == 0) {
             JOptionPane.showMessageDialog(rootPane, "Chưa Đăng nhập!!!");
         } else {
-//            this.dispose();
-//            new Information(id_customer55).setVisible(true);
+            if (id_product55 == 0) {
+                JOptionPane.showMessageDialog(rootPane, "Chưa chọn sản phẩm!!!");
+            } else {
+                dialog_quantitypay.setVisible(true);
+                dialog_quantitypay.setLocationRelativeTo(null);
+
+            }
         }
     }//GEN-LAST:event_btn_buy55ActionPerformed
+
+    private void btn_okpay55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_okpay55ActionPerformed
+        // TODO add your handling code here:
+        quantitypay55 = (int) spinner_quantitypay55.getValue();
+        dialog_quantity.setVisible(false);
+        this.dispose();
+        new Pay(id_customer55, id_product55, quantitypay55).setVisible(true);
+    }//GEN-LAST:event_btn_okpay55ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -637,12 +696,15 @@ DecimalFormat df55 = new DecimalFormat("#");
     private javax.swing.JButton btn_cart55;
     private javax.swing.JButton btn_logout;
     private javax.swing.JButton btn_ok55;
+    private javax.swing.JButton btn_okpay55;
     private javax.swing.JButton btn_profile55;
     private javax.swing.JDialog dialog_quantity;
+    private javax.swing.JDialog dialog_quantitypay;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
@@ -651,6 +713,7 @@ DecimalFormat df55 = new DecimalFormat("#");
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lab_fabric;
     private javax.swing.JLabel lab_fabric55;
@@ -666,6 +729,7 @@ DecimalFormat df55 = new DecimalFormat("#");
     private javax.swing.JLabel lab_type;
     private javax.swing.JLabel lab_type55;
     private javax.swing.JSpinner spinner_quantity55;
+    private javax.swing.JSpinner spinner_quantitypay55;
     private javax.swing.JTable tbl_products55;
     // End of variables declaration//GEN-END:variables
 }
