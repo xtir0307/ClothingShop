@@ -172,6 +172,7 @@ public class Cart extends javax.swing.JFrame {
         lab_madein55 = new javax.swing.JLabel();
         lab_img55 = new javax.swing.JLabel();
         btn_delete55 = new javax.swing.JButton();
+        btn_deleteall = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         btn_pay55 = new javax.swing.JButton();
         btn_back55 = new javax.swing.JButton();
@@ -211,14 +212,14 @@ public class Cart extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 255, 204));
@@ -269,12 +270,23 @@ public class Cart extends javax.swing.JFrame {
 
         lab_img55.setText(" ");
 
-        btn_delete55.setBackground(new java.awt.Color(255, 0, 0));
+        btn_delete55.setBackground(new java.awt.Color(255, 102, 51));
         btn_delete55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_delete55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bin.png"))); // NOI18N
         btn_delete55.setText("Xóa");
         btn_delete55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_delete55ActionPerformed(evt);
+            }
+        });
+
+        btn_deleteall.setBackground(new java.awt.Color(255, 0, 51));
+        btn_deleteall.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_deleteall.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/bin.png"))); // NOI18N
+        btn_deleteall.setText("Xóa tất cả");
+        btn_deleteall.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_deleteallActionPerformed(evt);
             }
         });
 
@@ -288,6 +300,14 @@ public class Cart extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(12, 12, 12)
+                        .addComponent(lab_type55, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lab_madein55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -306,22 +326,15 @@ public class Cart extends javax.swing.JFrame {
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(12, 12, 12)
                                 .addComponent(lab_price55, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel9))
-                        .addContainerGap(29, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(lab_img55, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_delete55)
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(12, 12, 12)
-                        .addComponent(lab_type55, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lab_madein55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                            .addComponent(jLabel9)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(lab_img55, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75)
+                                .addComponent(btn_delete55)
+                                .addGap(36, 36, 36)
+                                .addComponent(btn_deleteall)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,39 +346,41 @@ public class Cart extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(lab_type55)
+                    .addComponent(jLabel10)
+                    .addComponent(lab_madein55))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(lab_fabric55))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(lab_quantity55))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(lab_price55))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(lab_type55)
-                            .addComponent(jLabel10))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(lab_fabric55))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(lab_quantity55))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(lab_price55))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel9)
                         .addGap(7, 7, 7)
-                        .addComponent(lab_img55, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
-                        .addGap(13, 13, 13))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lab_madein55)
+                        .addComponent(lab_img55, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_delete55)
-                        .addContainerGap())))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_deleteall)
+                            .addComponent(btn_delete55))))
+                .addGap(13, 13, 13))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 153));
 
         btn_pay55.setBackground(new java.awt.Color(0, 255, 0));
         btn_pay55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_pay55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/credit-card.png"))); // NOI18N
         btn_pay55.setText("Thanh toán");
         btn_pay55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -375,6 +390,7 @@ public class Cart extends javax.swing.JFrame {
 
         btn_back55.setBackground(new java.awt.Color(255, 255, 51));
         btn_back55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_back55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back-button.png"))); // NOI18N
         btn_back55.setText("Quay lại");
         btn_back55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -397,7 +413,7 @@ public class Cart extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(btn_back55)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lab_username, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lab_username, javax.swing.GroupLayout.DEFAULT_SIZE, 747, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_pay55))
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -455,7 +471,7 @@ public class Cart extends javax.swing.JFrame {
     private void btn_delete55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete55ActionPerformed
         // TODO add your handling code here:
         try {
-            sqlHandler55.deleteProductCart(id_cart55);
+            sqlHandler55.deleteProductCart(id_cart55, id_customer55);
             clearData(tableModelProducts55
             );
             clearDataInput();
@@ -469,6 +485,18 @@ public class Cart extends javax.swing.JFrame {
         this.dispose();
         new Pay(id_customer55).setVisible(true);
     }//GEN-LAST:event_btn_pay55ActionPerformed
+
+    private void btn_deleteallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteallActionPerformed
+        // TODO add your handling code here:
+        try {
+            sqlHandler55.deleteAllProductCart(id_customer55);
+            clearData(tableModelProducts55
+            );
+            clearDataInput();
+            showDataProducts();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_btn_deleteallActionPerformed
 
     /**
      * @param args the command line arguments
@@ -509,6 +537,7 @@ public class Cart extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_back55;
     private javax.swing.JButton btn_delete55;
+    private javax.swing.JButton btn_deleteall;
     private javax.swing.JButton btn_pay55;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
