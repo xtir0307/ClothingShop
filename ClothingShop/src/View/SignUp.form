@@ -51,60 +51,60 @@
               <Component id="lab_notice" alignment="1" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" pref="460" max="-2" attributes="0"/>
+                      <Component id="lb_signup_26" min="-2" pref="460" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <EmptySpace min="41" pref="41" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_name_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="textf_username" min="-2" pref="247" max="-2" attributes="0"/>
+                          <Component id="textf_user_26" min="-2" pref="247" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_pass_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="textf_password" min="-2" pref="247" max="-2" attributes="0"/>
+                          <Component id="textf_pass_26" min="-2" pref="247" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="123" pref="123" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_firt_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="textf_firstname" min="-2" pref="247" max="-2" attributes="0"/>
+                          <Component id="textf_first_26" min="-2" pref="247" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="117" pref="117" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_lastN_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="textf_lastname" min="-2" pref="247" max="-2" attributes="0"/>
+                          <Component id="textf_lastn_26" min="-2" pref="247" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="85" pref="85" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_gender_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                          <Component id="rbtn_male" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbtn_male_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-                          <Component id="rbtn_female" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbtn_female_26" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_phone_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          <Component id="textf_phone" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="textf_phone_26" min="-2" pref="250" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="115" pref="115" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_email_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="textf_email" min="-2" pref="253" max="-2" attributes="0"/>
+                          <Component id="textf_email_26" min="-2" pref="253" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="198" pref="198" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_signup_26" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="101" pref="101" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_note_26" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_login_26" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -114,64 +114,64 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lb_signup_26" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lab_notice" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_username" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_name_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_user_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_password" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_pass_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_pass_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_firstname" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_firt_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_first_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_lastname" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_lastN_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_lastn_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_gender_26" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="rbtn_male" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbtn_female" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbtn_male_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbtn_female_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_phone" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_phone_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_phone_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <Component id="textf_email" min="-2" max="-2" attributes="0"/>
+                      <Component id="lb_email_26" min="-2" max="-2" attributes="0"/>
+                      <Component id="textf_email_26" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_signup_26" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lb_note_26" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_login_26" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lb_signup_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="24" style="1"/>
@@ -180,7 +180,7 @@
             <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xfd;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lb_note_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="0"/>
@@ -188,7 +188,7 @@
             <Property name="text" type="java.lang.String" value="B&#x1ea1;n &#x111;&#xe3; c&#xf3; t&#xe0;i kho&#x1ea3;n?"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="lb_gender_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -196,7 +196,7 @@
             <Property name="text" type="java.lang.String" value="Gi&#x1edb;i t&#xed;nh:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="btn_login_26">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="ff" red="ff" type="rgb"/>
@@ -207,18 +207,18 @@
             <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng nh&#x1ead;p"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_login_26ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_username">
+        <Component class="javax.swing.JTextField" name="textf_user_26">
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_password">
+        <Component class="javax.swing.JTextField" name="textf_pass_26">
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_firstname">
+        <Component class="javax.swing.JTextField" name="textf_first_26">
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_lastname">
+        <Component class="javax.swing.JTextField" name="textf_lastn_26">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lb_email_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -226,9 +226,9 @@
             <Property name="text" type="java.lang.String" value="Email:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_phone">
+        <Component class="javax.swing.JTextField" name="textf_phone_26">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lb_phone_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -236,9 +236,9 @@
             <Property name="text" type="java.lang.String" value="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="textf_email">
+        <Component class="javax.swing.JTextField" name="textf_email_26">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lb_name_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -246,7 +246,7 @@
             <Property name="text" type="java.lang.String" value="T&#xea;n &#x111;&#x103;ng nh&#x1ead;p:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtn_male">
+        <Component class="javax.swing.JRadioButton" name="rbtn_male_26">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btn_groupgender"/>
@@ -254,7 +254,7 @@
             <Property name="text" type="java.lang.String" value="Nam"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="lb_pass_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -262,7 +262,7 @@
             <Property name="text" type="java.lang.String" value="M&#x1ead;t kh&#x1ea9;u:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtn_female">
+        <Component class="javax.swing.JRadioButton" name="rbtn_female_26">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="btn_groupgender"/>
@@ -270,7 +270,7 @@
             <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lb_firt_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
@@ -278,7 +278,7 @@
             <Property name="text" type="java.lang.String" value="H&#x1ecd;:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btn_signup_26">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="ff" red="66" type="rgb"/>
@@ -289,10 +289,10 @@
             <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng k&#xfd;"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_signup_26ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="lb_lastN_26">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>

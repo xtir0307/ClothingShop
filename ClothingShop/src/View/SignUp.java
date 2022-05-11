@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Advanced.Theory.Mid_Term.View;
+package View;
 
-import Advanced.Theory.Mid_Term.Model.SQLHandler;
+import Model.SQLHandler;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -15,8 +15,8 @@ import javax.swing.JOptionPane;
 public class SignUp extends javax.swing.JFrame {
 
     public final SQLHandler sqlHandler = new SQLHandler();
-    private String username, password, firstname, lastname, phone, email;
-    private int gender;
+    private String username_26, password_26, firstname_26, lastname_26, phone_26, email_26;
+    private int gender_26;
 
     /**
      * Creates new form SignUp
@@ -26,29 +26,29 @@ public class SignUp extends javax.swing.JFrame {
     }
 
     public void getDataInput() {
-        username = textf_username.getText();
-        password = textf_password.getText();
-        firstname = textf_firstname.getText();
-        lastname = textf_lastname.getText();
-        phone = textf_phone.getText();
-        email = textf_email.getText();
-        if (rbtn_male.isSelected()) {
-            gender = 1;
+        username_26 = textf_user_26.getText();
+        password_26 = textf_pass_26.getText();
+        firstname_26 = textf_first_26.getText();
+        lastname_26 = textf_lastn_26.getText();
+        phone_26 = textf_phone_26.getText();
+        email_26 = textf_email_26.getText();
+        if (rbtn_male_26.isSelected()) {
+            gender_26 = 1;
         }
-        if (rbtn_female.isSelected()) {
-            gender = 0;
+        if (rbtn_female_26.isSelected()) {
+            gender_26 = 0;
         }
     }
 
     public void clearDataInput() {
-        textf_username.setText("");
-        textf_password.setText("");
-        textf_firstname.setText("");
-        textf_lastname.setText("");
-        textf_phone.setText("");
-        textf_email.setText("");
-        rbtn_female.setSelected(false);
-        rbtn_male.setSelected(false);
+        textf_user_26.setText("");
+        textf_pass_26.setText("");
+        textf_first_26.setText("");
+        textf_lastn_26.setText("");
+        textf_phone_26.setText("");
+        textf_email_26.setText("");
+        rbtn_female_26.setSelected(false);
+        rbtn_male_26.setSelected(false);
     }
 
     /**
@@ -62,25 +62,25 @@ public class SignUp extends javax.swing.JFrame {
 
         btn_groupgender = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        textf_username = new javax.swing.JTextField();
-        textf_password = new javax.swing.JTextField();
-        textf_firstname = new javax.swing.JTextField();
-        textf_lastname = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        textf_phone = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        textf_email = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        rbtn_male = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
-        rbtn_female = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        lb_signup_26 = new javax.swing.JLabel();
+        lb_note_26 = new javax.swing.JLabel();
+        lb_gender_26 = new javax.swing.JLabel();
+        btn_login_26 = new javax.swing.JButton();
+        textf_user_26 = new javax.swing.JTextField();
+        textf_pass_26 = new javax.swing.JTextField();
+        textf_first_26 = new javax.swing.JTextField();
+        textf_lastn_26 = new javax.swing.JTextField();
+        lb_email_26 = new javax.swing.JLabel();
+        textf_phone_26 = new javax.swing.JTextField();
+        lb_phone_26 = new javax.swing.JLabel();
+        textf_email_26 = new javax.swing.JTextField();
+        lb_name_26 = new javax.swing.JLabel();
+        rbtn_male_26 = new javax.swing.JRadioButton();
+        lb_pass_26 = new javax.swing.JLabel();
+        rbtn_female_26 = new javax.swing.JRadioButton();
+        lb_firt_26 = new javax.swing.JLabel();
+        btn_signup_26 = new javax.swing.JButton();
+        lb_lastN_26 = new javax.swing.JLabel();
         lab_notice = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,57 +88,57 @@ public class SignUp extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 255, 153));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Đăng ký");
+        lb_signup_26.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lb_signup_26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_signup_26.setText("Đăng ký");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Bạn đã có tài khoản?");
+        lb_note_26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lb_note_26.setText("Bạn đã có tài khoản?");
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setText("Giới tính:");
+        lb_gender_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_gender_26.setText("Giới tính:");
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Đăng nhập");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_login_26.setBackground(new java.awt.Color(255, 255, 102));
+        btn_login_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_login_26.setText("Đăng nhập");
+        btn_login_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_login_26ActionPerformed(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("Email:");
+        lb_email_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_email_26.setText("Email:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Số điện thoại:");
+        lb_phone_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_phone_26.setText("Số điện thoại:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Tên đăng nhập:");
+        lb_name_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_name_26.setText("Tên đăng nhập:");
 
-        btn_groupgender.add(rbtn_male);
-        rbtn_male.setText("Nam");
+        btn_groupgender.add(rbtn_male_26);
+        rbtn_male_26.setText("Nam");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("Mật khẩu:");
+        lb_pass_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_pass_26.setText("Mật khẩu:");
 
-        btn_groupgender.add(rbtn_female);
-        rbtn_female.setText("Nữ");
+        btn_groupgender.add(rbtn_female_26);
+        rbtn_female_26.setText("Nữ");
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Họ:");
+        lb_firt_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_firt_26.setText("Họ:");
 
-        jButton1.setBackground(new java.awt.Color(102, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Đăng ký");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_signup_26.setBackground(new java.awt.Color(102, 255, 204));
+        btn_signup_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_signup_26.setText("Đăng ký");
+        btn_signup_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_signup_26ActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Tên:");
+        lb_lastN_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_lastN_26.setText("Tên:");
 
         lab_notice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lab_notice.setText(" ");
@@ -150,99 +150,99 @@ public class SignUp extends javax.swing.JFrame {
             .addComponent(lab_notice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_signup_26, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(jLabel3)
+                        .addComponent(lb_name_26)
                         .addGap(30, 30, 30)
-                        .addComponent(textf_username, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_user_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addComponent(jLabel8)
+                        .addComponent(lb_pass_26)
                         .addGap(30, 30, 30)
-                        .addComponent(textf_password, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_pass_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(123, 123, 123)
-                        .addComponent(jLabel5)
+                        .addComponent(lb_firt_26)
                         .addGap(30, 30, 30)
-                        .addComponent(textf_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_first_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(117, 117, 117)
-                        .addComponent(jLabel7)
+                        .addComponent(lb_lastN_26)
                         .addGap(30, 30, 30)
-                        .addComponent(textf_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_lastn_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(jLabel9)
+                        .addComponent(lb_gender_26)
                         .addGap(30, 30, 30)
-                        .addComponent(rbtn_male)
+                        .addComponent(rbtn_male_26)
                         .addGap(36, 36, 36)
-                        .addComponent(rbtn_female))
+                        .addComponent(rbtn_female_26))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(53, 53, 53)
-                        .addComponent(jLabel4)
+                        .addComponent(lb_phone_26)
                         .addGap(27, 27, 27)
-                        .addComponent(textf_phone, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_phone_26, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(115, 115, 115)
-                        .addComponent(jLabel6)
+                        .addComponent(lb_email_26)
                         .addGap(18, 18, 18)
-                        .addComponent(textf_email, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textf_email_26, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(198, 198, 198)
-                        .addComponent(jButton1))
+                        .addComponent(btn_signup_26))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(jLabel1)
+                        .addComponent(lb_note_26)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)))
+                        .addComponent(btn_login_26)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2)
+                .addComponent(lb_signup_26)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lab_notice)
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(textf_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_name_26)
+                    .addComponent(textf_user_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(textf_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_pass_26)
+                    .addComponent(textf_pass_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(textf_firstname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_firt_26)
+                    .addComponent(textf_first_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(textf_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_lastN_26)
+                    .addComponent(textf_lastn_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
-                        .addComponent(jLabel9))
-                    .addComponent(rbtn_male)
-                    .addComponent(rbtn_female))
+                        .addComponent(lb_gender_26))
+                    .addComponent(rbtn_male_26)
+                    .addComponent(rbtn_female_26))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(textf_phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_phone_26)
+                    .addComponent(textf_phone_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(textf_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_email_26)
+                    .addComponent(textf_email_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
-                .addComponent(jButton1)
+                .addComponent(btn_signup_26)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(jLabel1))
-                    .addComponent(jButton2)))
+                        .addComponent(lb_note_26))
+                    .addComponent(btn_login_26)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -260,20 +260,30 @@ public class SignUp extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_login_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_login_26ActionPerformed
         // TODO add your handling code here:
         this.dispose();
         new Login().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_login_26ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_signup_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signup_26ActionPerformed
         // TODO add your handling code here:
         getDataInput();
-        sqlHandler.signUpCustomer(username, password, firstname, lastname, phone, email, gender);
-        clearDataInput();
-        lab_notice.setForeground(Color.black);
-        JOptionPane.showMessageDialog(rootPane, "Đăng kí thành công!!!");
-    }//GEN-LAST:event_jButton1ActionPerformed
+        try {
+            if (sqlHandler.checksignin(username_26) != 0) {
+                JOptionPane.showMessageDialog(rootPane, "Đã tồn tại tài tên đăng nhập!!!");
+            } else {
+                sqlHandler.signUpCustomer(username_26, password_26, firstname_26, lastname_26, phone_26, email_26, gender_26);
+                clearDataInput();
+                lab_notice.setForeground(Color.black);
+                JOptionPane.showMessageDialog(rootPane, "Đăng kí thành công!!!");
+                this.dispose();
+                new Login().setVisible(true);
+            }
+        } catch (Exception e) {
+        }
+
+    }//GEN-LAST:event_btn_signup_26ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,26 +322,26 @@ public class SignUp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btn_groupgender;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton btn_login_26;
+    private javax.swing.JButton btn_signup_26;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lab_notice;
-    private javax.swing.JRadioButton rbtn_female;
-    private javax.swing.JRadioButton rbtn_male;
-    private javax.swing.JTextField textf_email;
-    private javax.swing.JTextField textf_firstname;
-    private javax.swing.JTextField textf_lastname;
-    private javax.swing.JTextField textf_password;
-    private javax.swing.JTextField textf_phone;
-    private javax.swing.JTextField textf_username;
+    private javax.swing.JLabel lb_email_26;
+    private javax.swing.JLabel lb_firt_26;
+    private javax.swing.JLabel lb_gender_26;
+    private javax.swing.JLabel lb_lastN_26;
+    private javax.swing.JLabel lb_name_26;
+    private javax.swing.JLabel lb_note_26;
+    private javax.swing.JLabel lb_pass_26;
+    private javax.swing.JLabel lb_phone_26;
+    private javax.swing.JLabel lb_signup_26;
+    private javax.swing.JRadioButton rbtn_female_26;
+    private javax.swing.JRadioButton rbtn_male_26;
+    private javax.swing.JTextField textf_email_26;
+    private javax.swing.JTextField textf_first_26;
+    private javax.swing.JTextField textf_lastn_26;
+    private javax.swing.JTextField textf_pass_26;
+    private javax.swing.JTextField textf_phone_26;
+    private javax.swing.JTextField textf_user_26;
     // End of variables declaration//GEN-END:variables
 }
