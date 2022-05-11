@@ -46,8 +46,13 @@ public class SQLHandler {
 //        conn.excute(query);
 //    }
 
-    public void deleteProductCart(int id_cart) {
-        String query = "delete from cart where id_cart = '" + id_cart + "'";
+    public void deleteProductCart(int id_cart,int id_customer) {
+        String query = "delete from cart where id_cart = '" + id_cart + "' and id_customer = '"+id_customer+"'";
+        conn.excute(query);
+    }
+    
+    public void deleteAllProductCart(int id_customer) {
+        String query = "delete from cart where id_customer = '"+id_customer+"'";
         conn.excute(query);
     }
 
@@ -69,6 +74,21 @@ public class SQLHandler {
     public ResultSet getDataUsernameCustomer(String username) {
         String query = "select * from customers where username = '" + username + "'";
         return conn.getData(query);
+    }
+    
+    public String getNameCustomer(int id) {
+        String name = null;
+        ResultSet rs = null;
+        String query = "select * from customers where id_customer = " + id;
+        rs = conn.getData(query);
+        try {
+            while(rs.next()) {
+                name = rs.getString("firstname") +""+  rs.getString("lastname");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SQLHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return name;
     }
 
     public void insertCustomer(String username, String firstname, String lastname, String password, String phone, String email, int gender) {
@@ -162,7 +182,26 @@ public class SQLHandler {
         }
         return id_employee;
     }
-
+    
+    public int checksignin(String username) {
+        String querye = "select * from employee where username = '"+username+"'";
+        String queryc = "select * from customers where username = '"+username+"'";
+        int id= 0;
+        ResultSet rse = conn.getData(querye);
+        ResultSet rsc = conn.getData(queryc);
+        try {
+            while (rse.next()) {
+                id = rse.getInt(1);
+            }
+            while (rsc.next()) {
+                id = rsc.getInt(1);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SQLHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return id;
+    }
     public void signUpCustomer(String username, String password, String firstname, String lastname, String phone, String email, int gender) {
         String query = "insert into customers(username, firstname, lastname, passwordu, phone, email, gender) values(N'" + username + "', N'" + firstname + "', N'" + lastname + "', N'" + password + "', '" + phone + "', '" + email + "', " + gender + ")";
         conn.excute(query);
