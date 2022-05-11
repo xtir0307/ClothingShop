@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.sql.*;
 import java.text.DecimalFormat;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -113,7 +114,7 @@ public class Cart extends javax.swing.JFrame {
         lab_madein55.setText(madein55);
         lab_fabric55.setText(fabric55);
         lab_quantity55.setText(String.valueOf(quantity55));
-        lab_price55.setText(df55.format(price55));
+        lab_price55.setText(df55.format(price55) + " VNĐ");
         lab_img55.setIcon(ResizeImage(urlimg55));
     }
 
@@ -140,6 +141,12 @@ public class Cart extends javax.swing.JFrame {
         lab_quantity55.setText("");
         lab_price55.setText("");
         lab_img55.setIcon(null);
+    }
+
+    public int checkTable() {
+        int count = 0;
+        count = table_products55.getRowCount();
+        return count;
     }
 
     /**
@@ -182,7 +189,7 @@ public class Cart extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Giỏ hàng");
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -200,6 +207,7 @@ public class Cart extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        table_products55.setSelectionBackground(new java.awt.Color(0, 153, 102));
         table_products55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 table_products55MouseClicked(evt);
@@ -222,7 +230,7 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 490, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -376,7 +384,7 @@ public class Cart extends javax.swing.JFrame {
                 .addGap(13, 13, 13))
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 204, 153));
+        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
         btn_pay55.setBackground(new java.awt.Color(0, 255, 0));
         btn_pay55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -471,31 +479,48 @@ public class Cart extends javax.swing.JFrame {
     private void btn_delete55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete55ActionPerformed
         // TODO add your handling code here:
         try {
-            sqlHandler55.deleteProductCart(id_cart55, id_customer55);
-            clearData(tableModelProducts55
-            );
-            clearDataInput();
-            showDataProducts();
+            if (id_cart55 == 0) {
+                JOptionPane.showMessageDialog(rootPane, "Chưa chọn sản phẩm!!!");
+            } else {
+                sqlHandler55.deleteProductCart(id_cart55, id_customer55);
+                JOptionPane.showMessageDialog(rootPane, "Đã xóa sản phẩm!!!");
+                clearData(tableModelProducts55
+                );
+                clearDataInput();
+                showDataProducts();
+            }
+
         } catch (Exception e) {
         }
     }//GEN-LAST:event_btn_delete55ActionPerformed
 
     private void btn_pay55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pay55ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        new Pay(id_customer55).setVisible(true);
+        if (checkTable() == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Chưa có sản phẩm nào!!!");
+        } else {
+            this.dispose();
+            new Pay(id_customer55).setVisible(true);
+        }
+
     }//GEN-LAST:event_btn_pay55ActionPerformed
 
     private void btn_deleteallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteallActionPerformed
         // TODO add your handling code here:
-        try {
-            sqlHandler55.deleteAllProductCart(id_customer55);
-            clearData(tableModelProducts55
-            );
-            clearDataInput();
-            showDataProducts();
-        } catch (Exception e) {
+        if (checkTable() == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Không có sản phẩm nào");
+        } else {
+            try {
+                sqlHandler55.deleteAllProductCart(id_customer55);
+                JOptionPane.showMessageDialog(rootPane, "Đã xóa tất cả sản phẩm!!!");
+                clearData(tableModelProducts55
+                );
+                clearDataInput();
+                showDataProducts();
+            } catch (Exception e) {
+            }
         }
+
     }//GEN-LAST:event_btn_deleteallActionPerformed
 
     /**
