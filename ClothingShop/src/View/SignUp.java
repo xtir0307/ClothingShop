@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package Advanced.Theory.Mid_Term.View;
 
-import Model.SQLHandler;
+import Advanced.Theory.Mid_Term.Model.SQLHandler;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
@@ -269,20 +269,10 @@ public class SignUp extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         getDataInput();
-        try {
-            if (sqlHandler.checksignin(username) != 0) {
-                JOptionPane.showMessageDialog(rootPane, "Đã tồn tại tài tên đăng nhập!!!");
-            } else {
-                sqlHandler.signUpCustomer(username, password, firstname, lastname, phone, email, gender);
-                clearDataInput();
-                lab_notice.setForeground(Color.black);
-                JOptionPane.showMessageDialog(rootPane, "Đăng kí thành công!!!");
-                this.dispose();
-                new Login().setVisible(true);
-            }
-        } catch (Exception e) {
-        }
-
+        sqlHandler.signUpCustomer(username, password, firstname, lastname, phone, email, gender);
+        clearDataInput();
+        lab_notice.setForeground(Color.black);
+        JOptionPane.showMessageDialog(rootPane, "Đăng kí thành công!!!");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
