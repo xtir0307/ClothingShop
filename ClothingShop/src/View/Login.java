@@ -33,15 +33,15 @@ public class Login extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        textf_username = new javax.swing.JTextField();
-        textf_password = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        btn_home = new javax.swing.JButton();
+        lb_login_26 = new javax.swing.JLabel();
+        lb_pass_26 = new javax.swing.JLabel();
+        textf_user_26 = new javax.swing.JTextField();
+        textf_pass_26 = new javax.swing.JTextField();
+        btn_login_26 = new javax.swing.JButton();
+        lb_note_26 = new javax.swing.JLabel();
+        btn_signup_26 = new javax.swing.JButton();
+        lb_user_26 = new javax.swing.JLabel();
+        btn_home_26 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng nhập");
@@ -49,9 +49,9 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Đăng nhập");
+        lb_login_26.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lb_login_26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_login_26.setText("Đăng nhập");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -60,16 +60,16 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.ipady = 11;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(26, 27, 0, 27);
-        jPanel1.add(jLabel1, gridBagConstraints);
+        jPanel1.add(lb_login_26, gridBagConstraints);
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Mật khẩu: ");
+        lb_pass_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_pass_26.setText("Mật khẩu: ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(29, 113, 0, 0);
-        jPanel1.add(jLabel3, gridBagConstraints);
+        jPanel1.add(lb_pass_26, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -78,7 +78,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 261;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 5, 0, 0);
-        jPanel1.add(textf_username, gridBagConstraints);
+        jPanel1.add(textf_user_26, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
@@ -87,14 +87,14 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 261;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(29, 5, 0, 0);
-        jPanel1.add(textf_password, gridBagConstraints);
+        jPanel1.add(textf_pass_26, gridBagConstraints);
 
-        jButton1.setBackground(new java.awt.Color(51, 255, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Đăng nhập");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_login_26.setBackground(new java.awt.Color(51, 255, 0));
+        btn_login_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_login_26.setText("Đăng nhập");
+        btn_login_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_login_26ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -104,24 +104,24 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 20;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(28, 23, 0, 0);
-        jPanel1.add(jButton1, gridBagConstraints);
+        jPanel1.add(btn_login_26, gridBagConstraints);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Bạn chưa có tài khoản?");
+        lb_note_26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lb_note_26.setText("Bạn chưa có tài khoản?");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(17, 163, 0, 0);
-        jPanel1.add(jLabel4, gridBagConstraints);
+        jPanel1.add(lb_note_26, gridBagConstraints);
 
-        jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Đăng ký");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn_signup_26.setBackground(new java.awt.Color(255, 0, 0));
+        btn_signup_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_signup_26.setText("Đăng ký");
+        btn_signup_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn_signup_26ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -131,23 +131,23 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(13, 5, 0, 0);
-        jPanel1.add(jButton2, gridBagConstraints);
+        jPanel1.add(btn_signup_26, gridBagConstraints);
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Tên người dùng: ");
+        lb_user_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_user_26.setText("Tên người dùng: ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 69, 0, 0);
-        jPanel1.add(jLabel2, gridBagConstraints);
+        jPanel1.add(lb_user_26, gridBagConstraints);
 
-        btn_home.setBackground(new java.awt.Color(255, 255, 51));
-        btn_home.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btn_home.setText("Trang chủ");
-        btn_home.addActionListener(new java.awt.event.ActionListener() {
+        btn_home_26.setBackground(new java.awt.Color(255, 255, 51));
+        btn_home_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_home_26.setText("Trang chủ");
+        btn_home_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_homeActionPerformed(evt);
+                btn_home_26ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -156,7 +156,7 @@ public class Login extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(13, 38, 22, 0);
-        jPanel1.add(btn_home, gridBagConstraints);
+        jPanel1.add(btn_home_26, gridBagConstraints);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -173,33 +173,33 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_login_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_login_26ActionPerformed
         // TODO add your handling code here:
         try {
-            if (sqlHandler.getIdCustomer(textf_username.getText(), textf_password.getText()) != 0) {
+            if (sqlHandler.getIdCustomer(textf_user_26.getText(), textf_pass_26.getText()) != 0) {
                 this.dispose();
-                new Home(sqlHandler.getIdCustomer(textf_username.getText(), textf_password.getText())).setVisible(true);
-            } else if (sqlHandler.getIdEmployee(textf_username.getText(), textf_password.getText()) != 0) {
+                new Home(sqlHandler.getIdCustomer(textf_user_26.getText(), textf_pass_26.getText())).setVisible(true);
+            } else if (sqlHandler.getIdEmployee(textf_user_26.getText(), textf_pass_26.getText()) != 0) {
                 this.dispose();
-                new Manager(sqlHandler.getIdEmployee(textf_username.getText(), textf_password.getText())).setVisible(true);
+                new Manager(sqlHandler.getIdEmployee(textf_user_26.getText(), textf_pass_26.getText())).setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Đăng nhập thất bại");
             }
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_login_26ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btn_signup_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signup_26ActionPerformed
         // TODO add your handling code here:
         this.dispose();
         new SignUp().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btn_signup_26ActionPerformed
 
-    private void btn_homeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_homeActionPerformed
+    private void btn_home_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_home_26ActionPerformed
         // TODO add your handling code here:
         this.dispose();
         new Home().setVisible(true);
-    }//GEN-LAST:event_btn_homeActionPerformed
+    }//GEN-LAST:event_btn_home_26ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,15 +238,15 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_home;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton btn_home_26;
+    private javax.swing.JButton btn_login_26;
+    private javax.swing.JButton btn_signup_26;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField textf_password;
-    private javax.swing.JTextField textf_username;
+    private javax.swing.JLabel lb_login_26;
+    private javax.swing.JLabel lb_note_26;
+    private javax.swing.JLabel lb_pass_26;
+    private javax.swing.JLabel lb_user_26;
+    private javax.swing.JTextField textf_pass_26;
+    private javax.swing.JTextField textf_user_26;
     // End of variables declaration//GEN-END:variables
 }
