@@ -53,8 +53,13 @@ public class Home extends javax.swing.JFrame {
         this.id_customer55 = id_customer55;
         if (id_customer55 == 0) {
             btn_logout.setText("Đăng nhập");
+            ImageIcon icon = new ImageIcon("D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\enter.png");
+            btn_logout.setIcon(icon);
         } else {
+            lab_showname.setText("  Xin chào: " + sqlHandler55.getNameCustomer(id_customer55));
             btn_logout.setText("Đăng xuất");
+            ImageIcon icon = new ImageIcon("D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\logout.png");
+            btn_logout.setIcon(icon);
         }
 
     }
@@ -111,7 +116,7 @@ public class Home extends javax.swing.JFrame {
                 lab_fabric55.setText(rs.getString("fabric"));
                 lab_madein55.setText(rs.getString("madein"));
                 lab_quantity55.setText(rs.getString("quantity"));
-                lab_price55.setText(String.valueOf(df55.format(rs.getDouble("price"))));
+                lab_price55.setText(String.valueOf(df55.format(rs.getDouble("price"))) + " VNĐ");
                 lab_imgproduct55.setIcon(ResizeImage(rs.getString("urlimg")));
             }
         } catch (Exception e) {
@@ -169,6 +174,7 @@ public class Home extends javax.swing.JFrame {
         btn_logout = new javax.swing.JButton();
         btn_cart55 = new javax.swing.JButton();
         btn_profile55 = new javax.swing.JButton();
+        lab_showname = new javax.swing.JLabel();
 
         dialog_quantity.setTitle("Số lượng thêm");
         dialog_quantity.setMinimumSize(new java.awt.Dimension(315, 150));
@@ -229,6 +235,8 @@ public class Home extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Số lượng: ");
+
+        spinner_quantitypay55.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         btn_okpay55.setBackground(new java.awt.Color(51, 255, 0));
         btn_okpay55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -420,7 +428,7 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sản phẩm");
 
-        tbl_products55.setBackground(new java.awt.Color(153, 255, 255));
+        tbl_products55.setBackground(new java.awt.Color(204, 255, 204));
         tbl_products55.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -432,6 +440,7 @@ public class Home extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbl_products55.setSelectionBackground(new java.awt.Color(0, 153, 102));
         tbl_products55.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_products55MouseClicked(evt);
@@ -532,19 +541,23 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        lab_showname.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lab_showname.setText(" ");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(lab_showname, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_cart55)
                 .addGap(18, 18, 18)
                 .addComponent(btn_profile55)
                 .addGap(18, 18, 18)
                 .addComponent(btn_logout)
                 .addContainerGap())
-            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -554,7 +567,9 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_cart55)
                     .addComponent(btn_logout)
-                    .addComponent(btn_profile55)))
+                    .addComponent(btn_profile55)
+                    .addComponent(lab_showname, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -645,10 +660,10 @@ public class Home extends javax.swing.JFrame {
     private void btn_ok55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ok55ActionPerformed
         // TODO add your handling code here:
         quantity55 = (int) spinner_quantity55.getValue();
-        sqlHandler55.addProducttoCart(id_customer55, id_product55, quantity55);
         if (quantity55 <= 0) {
             JOptionPane.showMessageDialog(rootPane, "Số lượng phải khác 0!!!");
         } else {
+            sqlHandler55.addProducttoCart(id_customer55, id_product55, quantity55);
             JOptionPane.showMessageDialog(rootPane, "Đã thêm vào giỏ hàng!!!");
             dialog_quantity.dispose();
             dialog_quantity.setVisible(false);
@@ -756,6 +771,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel lab_price55;
     private javax.swing.JLabel lab_quantity;
     private javax.swing.JLabel lab_quantity55;
+    private javax.swing.JLabel lab_showname;
     private javax.swing.JLabel lab_type;
     private javax.swing.JLabel lab_type55;
     private javax.swing.JSpinner spinner_quantity55;
