@@ -25,7 +25,7 @@ public class Pay extends javax.swing.JFrame {
 //    public String username;
     public int id_customer;
     private String name_product, type_product, fabric, madein, urlimg;
-    private int quantity, id_product, id_cart;
+    private int quantity, id_product, id_cart, home = 0;
     private Double price, payment = 0.0;
     DecimalFormat df = new DecimalFormat("#");
 
@@ -44,6 +44,7 @@ public class Pay extends javax.swing.JFrame {
     }
     
     public Pay(int id_customer, int id_product, int quantity) {
+        home = 1;
         initComponents();
         this.id_customer = id_customer;
         setTableProduct(id_product, quantity);
@@ -142,6 +143,11 @@ public class Pay extends javax.swing.JFrame {
         }
     }
     
+    public int checkTable() {
+        int count = 0;
+        count = table_products.getRowCount();
+        return count;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -166,9 +172,9 @@ public class Pay extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Thanh toán");
 
-        jPanel1.setBackground(new java.awt.Color(190, 255, 185));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
-        jPanel3.setBackground(new java.awt.Color(190, 255, 185));
+        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -179,29 +185,13 @@ public class Pay extends javax.swing.JFrame {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        table_products.setSelectionBackground(new java.awt.Color(153, 255, 255));
+        table_products.setSelectionBackground(new java.awt.Color(0, 153, 102));
         jScrollPane1.setViewportView(table_products);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -259,16 +249,14 @@ public class Pay extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lab_payment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lab_payment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,13 +292,24 @@ public class Pay extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        new Cart(id_customer).setVisible(true);
+        if(home == 0) {
+            this.dispose();
+            new Cart(id_customer).setVisible(true);
+        } else {
+            this.dispose();
+            new Home(id_customer).setVisible(true);
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(rootPane, "Đặt hàng thành công!!!");
+        if(checkTable() == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Chưa có sản phẩm!!!");
+        } else {
+            JOptionPane.showMessageDialog(rootPane, "Đặt hàng thành công!!!");
+        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
