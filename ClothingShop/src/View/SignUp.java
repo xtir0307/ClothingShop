@@ -61,7 +61,10 @@ public class SignUp extends javax.swing.JFrame {
     private void initComponents() {
 
         btn_groupgender = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        jpn_box_26 = new javax.swing.JPanel();
+        jpn_su_26 = new javax.swing.JPanel();
+        jlb_logo_26 = new javax.swing.JLabel();
+        jpn_form_26 = new javax.swing.JPanel();
         lb_signup_26 = new javax.swing.JLabel();
         lb_note_26 = new javax.swing.JLabel();
         lb_gender_26 = new javax.swing.JLabel();
@@ -81,179 +84,238 @@ public class SignUp extends javax.swing.JFrame {
         lb_firt_26 = new javax.swing.JLabel();
         btn_signup_26 = new javax.swing.JButton();
         lb_lastN_26 = new javax.swing.JLabel();
-        lab_notice = new javax.swing.JLabel();
+        lab_notice_26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng kí");
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jlb_logo_26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo_signup.jpg"))); // NOI18N
 
-        lb_signup_26.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jpn_form_26.setBackground(new java.awt.Color(102, 0, 204));
+
+        lb_signup_26.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lb_signup_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_signup_26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_signup_26.setText("Đăng ký");
 
-        lb_note_26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lb_note_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_note_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_note_26.setText("Bạn đã có tài khoản?");
 
-        lb_gender_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_gender_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_gender_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_gender_26.setText("Giới tính:");
 
-        btn_login_26.setBackground(new java.awt.Color(255, 255, 102));
-        btn_login_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_login_26.setBackground(new java.awt.Color(255, 204, 0));
+        btn_login_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btn_login_26.setForeground(new java.awt.Color(153, 0, 153));
         btn_login_26.setText("Đăng nhập");
+        btn_login_26.setBorder(null);
+        btn_login_26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_login_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_login_26ActionPerformed(evt);
             }
         });
 
-        lb_email_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_email_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_email_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_email_26.setText("Email:");
 
-        lb_phone_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_phone_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_phone_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_phone_26.setText("Số điện thoại:");
 
-        lb_name_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_name_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_name_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_name_26.setText("Tên đăng nhập:");
 
-        btn_groupgender.add(rbtn_male_26);
+        rbtn_male_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        rbtn_male_26.setForeground(new java.awt.Color(255, 255, 255));
         rbtn_male_26.setText("Nam");
 
-        lb_pass_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_pass_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_pass_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_pass_26.setText("Mật khẩu:");
 
-        btn_groupgender.add(rbtn_female_26);
+        rbtn_female_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        rbtn_female_26.setForeground(new java.awt.Color(255, 255, 255));
         rbtn_female_26.setText("Nữ");
 
-        lb_firt_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_firt_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_firt_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_firt_26.setText("Họ:");
 
-        btn_signup_26.setBackground(new java.awt.Color(102, 255, 204));
-        btn_signup_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_signup_26.setBackground(new java.awt.Color(255, 204, 0));
+        btn_signup_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btn_signup_26.setForeground(new java.awt.Color(153, 0, 153));
         btn_signup_26.setText("Đăng ký");
+        btn_signup_26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btn_signup_26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_signup_26ActionPerformed(evt);
             }
         });
 
-        lb_lastN_26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lb_lastN_26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        lb_lastN_26.setForeground(new java.awt.Color(255, 255, 255));
         lb_lastN_26.setText("Tên:");
 
-        lab_notice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lab_notice.setText(" ");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lab_notice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lb_signup_26, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(lb_name_26)
-                        .addGap(30, 30, 30)
-                        .addComponent(textf_user_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(lb_pass_26)
-                        .addGap(30, 30, 30)
-                        .addComponent(textf_pass_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(lb_firt_26)
-                        .addGap(30, 30, 30)
-                        .addComponent(textf_first_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(lb_lastN_26)
-                        .addGap(30, 30, 30)
-                        .addComponent(textf_lastn_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(lb_gender_26)
-                        .addGap(30, 30, 30)
-                        .addComponent(rbtn_male_26)
-                        .addGap(36, 36, 36)
-                        .addComponent(rbtn_female_26))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(lb_phone_26)
-                        .addGap(27, 27, 27)
-                        .addComponent(textf_phone_26, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(lb_email_26)
-                        .addGap(18, 18, 18)
-                        .addComponent(textf_email_26, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(198, 198, 198)
-                        .addComponent(btn_signup_26))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jpn_form_26Layout = new javax.swing.GroupLayout(jpn_form_26);
+        jpn_form_26.setLayout(jpn_form_26Layout);
+        jpn_form_26Layout.setHorizontalGroup(
+            jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpn_form_26Layout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addComponent(lb_note_26)
                         .addGap(18, 18, 18)
-                        .addComponent(btn_login_26)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addComponent(btn_login_26, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpn_form_26Layout.createSequentialGroup()
+                        .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(lb_name_26))
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addGap(78, 78, 78)
+                                .addComponent(lb_pass_26))
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addGap(123, 123, 123)
+                                .addComponent(lb_firt_26))
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addGap(117, 117, 117)
+                                .addComponent(lb_lastN_26)))
+                        .addGap(30, 30, 30)
+                        .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(textf_user_26, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(textf_pass_26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                                .addComponent(textf_first_26, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textf_lastn_26, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(jpn_form_26Layout.createSequentialGroup()
+                        .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addGap(85, 85, 85)
+                                .addComponent(lb_gender_26))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_form_26Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lb_email_26, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(lb_phone_26, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(30, 30, 30)
+                        .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(textf_email_26, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                                .addComponent(rbtn_male_26)
+                                .addGap(36, 36, 36)
+                                .addComponent(rbtn_female_26))
+                            .addComponent(textf_phone_26))))
+                .addGap(0, 71, Short.MAX_VALUE))
+            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(lb_signup_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_form_26Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_signup_26, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(160, 160, 160))
+            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lab_notice_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jpn_form_26Layout.setVerticalGroup(
+            jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_form_26Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(lb_signup_26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lab_notice)
-                .addGap(11, 11, 11)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(5, 5, 5)
+                .addComponent(lab_notice_26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_name_26)
                     .addComponent(textf_user_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_pass_26)
                     .addComponent(textf_pass_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_firt_26)
                     .addComponent(textf_first_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_lastN_26)
                     .addComponent(textf_lastn_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpn_form_26Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(lb_gender_26))
                     .addComponent(rbtn_male_26)
                     .addComponent(rbtn_female_26))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lb_phone_26)
                     .addComponent(textf_phone_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textf_email_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_email_26))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lb_email_26)
-                    .addComponent(textf_email_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addComponent(btn_signup_26)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(lb_note_26))
-                    .addComponent(btn_login_26)))
+                .addComponent(btn_signup_26, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addGroup(jpn_form_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lb_note_26)
+                    .addComponent(btn_login_26, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jpn_su_26Layout = new javax.swing.GroupLayout(jpn_su_26);
+        jpn_su_26.setLayout(jpn_su_26Layout);
+        jpn_su_26Layout.setHorizontalGroup(
+            jpn_su_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_su_26Layout.createSequentialGroup()
+                .addComponent(jlb_logo_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpn_form_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpn_su_26Layout.setVerticalGroup(
+            jpn_su_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_su_26Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jlb_logo_26, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpn_su_26Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jpn_form_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
+        );
+
+        javax.swing.GroupLayout jpn_box_26Layout = new javax.swing.GroupLayout(jpn_box_26);
+        jpn_box_26.setLayout(jpn_box_26Layout);
+        jpn_box_26Layout.setHorizontalGroup(
+            jpn_box_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpn_box_26Layout.createSequentialGroup()
+                .addComponent(jpn_su_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpn_box_26Layout.setVerticalGroup(
+            jpn_box_26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jpn_su_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpn_box_26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpn_box_26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -275,14 +337,13 @@ public class SignUp extends javax.swing.JFrame {
             } else {
                 sqlHandler.signUpCustomer(username_26, password_26, firstname_26, lastname_26, phone_26, email_26, gender_26);
                 clearDataInput();
-                lab_notice.setForeground(Color.black);
+                lab_notice_26.setForeground(Color.black);
                 JOptionPane.showMessageDialog(rootPane, "Đăng kí thành công!!!");
                 this.dispose();
                 new Login().setVisible(true);
             }
         } catch (Exception e) {
         }
-
     }//GEN-LAST:event_btn_signup_26ActionPerformed
 
     /**
@@ -324,8 +385,11 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btn_groupgender;
     private javax.swing.JButton btn_login_26;
     private javax.swing.JButton btn_signup_26;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lab_notice;
+    private javax.swing.JLabel jlb_logo_26;
+    private javax.swing.JPanel jpn_box_26;
+    private javax.swing.JPanel jpn_form_26;
+    private javax.swing.JPanel jpn_su_26;
+    private javax.swing.JLabel lab_notice_26;
     private javax.swing.JLabel lb_email_26;
     private javax.swing.JLabel lb_firt_26;
     private javax.swing.JLabel lb_gender_26;
