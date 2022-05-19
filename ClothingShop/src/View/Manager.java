@@ -25,7 +25,7 @@ import javax.swing.table.TableModel;
 
 /**
  *
- * @author xtir0
+ * @author HNhat
  */
 public class Manager extends javax.swing.JFrame {
 DecimalFormat df = new DecimalFormat("#");
@@ -33,10 +33,10 @@ DecimalFormat df = new DecimalFormat("#");
     public final DefaultTableModel tableModelProducts = new DefaultTableModel();
     public final DefaultTableModel tableModelCustomer = new DefaultTableModel();
     public final DefaultTableModel tableModelEmployee = new DefaultTableModel();
-    // Products
-    private String name_product, type_product, fabric, madein, urlimg;
-    private Double price;
-    private int id_product, quantity;
+    // Products_44
+    private String name_product_44, type_product_44, fabric_44, madein_44, urlimg_44;
+    private Double price_44;
+    private int id_product_44, quantity_44;
 
     // Customer
     private String username, firstname, lastname, password, phone, email;
@@ -124,15 +124,15 @@ DecimalFormat df = new DecimalFormat("#");
 
     public void getDataSQLProduct() {
         try {
-            ResultSet rs = sqlHandler.getDataIdProductId(id_product);
+            ResultSet rs = sqlHandler.getDataIdProductId(id_product_44);
             while (rs.next()) {
-                name_product = rs.getString("name_product");
-                type_product = rs.getString("type_product");
-                fabric = rs.getString("fabric");
-                madein = rs.getString("madein");
-                quantity = rs.getInt("quantity");
-                price = rs.getDouble("price");
-                urlimg = rs.getString("urlimg");
+                name_product_44 = rs.getString("name_product");
+                type_product_44 = rs.getString("type_product");
+                fabric_44 = rs.getString("fabric");
+                madein_44 = rs.getString("madein");
+                quantity_44 = rs.getInt("quantity");
+                price_44 = rs.getDouble("price");
+                urlimg_44 = rs.getString("urlimg");
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -140,22 +140,22 @@ DecimalFormat df = new DecimalFormat("#");
     }
 
     public void getDataProduct() {
-        name_product = textf_nameproduct.getText();
-        type_product = textf_types.getText();
-        fabric = textf_fabric.getText();
-        madein = textf_madein.getText();
-        quantity = Integer.valueOf(textf_quantity.getText());
-        price = Double.valueOf(textf_price.getText());
+        name_product_44 = textf_nameproduct.getText();
+        type_product_44 = textf_types.getText();
+        fabric_44 = textf_fabric.getText();
+        madein_44 = textf_madein.getText();
+        quantity_44 = Integer.valueOf(textf_quantity.getText());
+        price_44 = Double.valueOf(textf_price.getText());
     }
 
     public void setDataProduct() {
-        textf_nameproduct.setText(name_product);
-        textf_types.setText(type_product);
-        textf_madein.setText(madein);
-        textf_fabric.setText(fabric);
-        textf_quantity.setText(String.valueOf(quantity));
-        textf_price.setText(String.valueOf(df.format(price)));
-        lab_img.setIcon(ResizeImage(urlimg));
+        textf_nameproduct.setText(name_product_44);
+        textf_types.setText(type_product_44);
+        textf_madein.setText(madein_44);
+        textf_fabric.setText(fabric_44);
+        textf_quantity.setText(String.valueOf(quantity_44));
+        textf_price.setText(String.valueOf(df.format(price_44)));
+        lab_img.setIcon(ResizeImage(urlimg_44));
     }
 
     public void refreshProduct() {
@@ -1641,17 +1641,18 @@ DecimalFormat df = new DecimalFormat("#");
     private void table_productsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_productsMouseClicked
         // TODO add your handling code here:
         int row = table_products.getSelectedRow();
-        id_product = Integer.valueOf(table_products.getModel().getValueAt(row, 5).toString());
+        id_product_44 = Integer.valueOf(table_products.getModel().getValueAt(row, 5).toString());
         getDataSQLProduct();
         setDataProduct();
     }//GEN-LAST:event_table_productsMouseClicked
 
     private void btn_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editActionPerformed
         // TODO add your handling code here:
+        //sua sp_44
         try {
             getDataProduct();
             refreshProduct();
-            sqlHandler.updateProduct(id_product, name_product, type_product, fabric, madein, price, quantity, urlimg);
+            sqlHandler.updateProduct(id_product_44, name_product_44, type_product_44, fabric_44, madein_44, price_44, quantity_44, urlimg_44);
         } catch (Exception e) {
         }
 
@@ -1660,15 +1661,17 @@ DecimalFormat df = new DecimalFormat("#");
 
     private void btn_renewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_renewActionPerformed
         // TODO add your handling code here:
+        //lammoi sp44
         renewProduct();
 
     }//GEN-LAST:event_btn_renewActionPerformed
 
     private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
         // TODO add your handling code here:
+        //thêm sp444
         try {
             getDataProduct();
-            sqlHandler.insertProduct(name_product, type_product, fabric, madein, price, quantity, urlimg);
+            sqlHandler.insertProduct(name_product_44, type_product_44, fabric_44, madein_44, price_44, quantity_44, urlimg_44);
             refreshProduct();
             renewProduct();
 
@@ -1678,8 +1681,9 @@ DecimalFormat df = new DecimalFormat("#");
 
     private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
         // TODO add your handling code here:
+        //xóa sp44
         try {
-            sqlHandler.deleteProduct(id_product);
+            sqlHandler.deleteProduct(id_product_44);
             refreshProduct();
             renewProduct();
         } catch (Exception e) {
@@ -1809,7 +1813,7 @@ DecimalFormat df = new DecimalFormat("#");
             } catch (Exception ex) {
             }
             lab_img.setIcon(ResizeImage("D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\" + name));
-            urlimg = "D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\" + name;
+            urlimg_44 = "D:\\MyCode\\Java\\Advanced\\Theory\\ClothingShop\\src\\Image\\" + name;
         }
     }
 
