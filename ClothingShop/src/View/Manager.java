@@ -497,10 +497,10 @@ DecimalFormat df = new DecimalFormat("#");
         btn_chosefile = new javax.swing.JButton();
         lab_img = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        btn_add = new javax.swing.JButton();
-        btn_edit = new javax.swing.JButton();
-        btn_delete = new javax.swing.JButton();
-        btn_renew = new javax.swing.JButton();
+        btn_add44 = new javax.swing.JButton();
+        btn_edit44 = new javax.swing.JButton();
+        btn_delete44 = new javax.swing.JButton();
+        btn_renew44 = new javax.swing.JButton();
         panel_customer = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -846,35 +846,35 @@ DecimalFormat df = new DecimalFormat("#");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 204));
 
-        btn_add.setBackground(new java.awt.Color(102, 255, 102));
-        btn_add.setText("Thêm");
-        btn_add.addActionListener(new java.awt.event.ActionListener() {
+        btn_add44.setBackground(new java.awt.Color(102, 255, 102));
+        btn_add44.setText("Thêm");
+        btn_add44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_addActionPerformed(evt);
+                btn_add44ActionPerformed(evt);
             }
         });
 
-        btn_edit.setBackground(new java.awt.Color(255, 204, 102));
-        btn_edit.setText("Sửa");
-        btn_edit.addActionListener(new java.awt.event.ActionListener() {
+        btn_edit44.setBackground(new java.awt.Color(255, 204, 102));
+        btn_edit44.setText("Sửa");
+        btn_edit44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_editActionPerformed(evt);
+                btn_edit44ActionPerformed(evt);
             }
         });
 
-        btn_delete.setBackground(new java.awt.Color(255, 102, 102));
-        btn_delete.setText("Xóa");
-        btn_delete.addActionListener(new java.awt.event.ActionListener() {
+        btn_delete44.setBackground(new java.awt.Color(255, 102, 102));
+        btn_delete44.setText("Xóa");
+        btn_delete44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_deleteActionPerformed(evt);
+                btn_delete44ActionPerformed(evt);
             }
         });
 
-        btn_renew.setBackground(new java.awt.Color(102, 255, 204));
-        btn_renew.setText("Làm mới");
-        btn_renew.addActionListener(new java.awt.event.ActionListener() {
+        btn_renew44.setBackground(new java.awt.Color(102, 255, 204));
+        btn_renew44.setText("Làm mới");
+        btn_renew44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_renewActionPerformed(evt);
+                btn_renew44ActionPerformed(evt);
             }
         });
 
@@ -884,13 +884,13 @@ DecimalFormat df = new DecimalFormat("#");
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(btn_add, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
+                .addComponent(btn_add44, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
-                .addComponent(btn_edit, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                .addComponent(btn_edit44, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
                 .addGap(26, 26, 26)
-                .addComponent(btn_renew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_renew44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
-                .addComponent(btn_delete, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(btn_delete44, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
         );
         jPanel3Layout.setVerticalGroup(
@@ -898,10 +898,10 @@ DecimalFormat df = new DecimalFormat("#");
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_delete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_renew)
-                    .addComponent(btn_edit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_add44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_delete44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_renew44)
+                    .addComponent(btn_edit44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1646,7 +1646,7 @@ DecimalFormat df = new DecimalFormat("#");
         setDataProduct();
     }//GEN-LAST:event_table_productsMouseClicked
 
-    private void btn_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editActionPerformed
+    private void btn_edit44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_edit44ActionPerformed
         // TODO add your handling code here:
         //sua sp_44
         try {
@@ -1657,16 +1657,16 @@ DecimalFormat df = new DecimalFormat("#");
         }
 
 
-    }//GEN-LAST:event_btn_editActionPerformed
+    }//GEN-LAST:event_btn_edit44ActionPerformed
 
-    private void btn_renewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_renewActionPerformed
+    private void btn_renew44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_renew44ActionPerformed
         // TODO add your handling code here:
         //lammoi sp44
         renewProduct();
 
-    }//GEN-LAST:event_btn_renewActionPerformed
+    }//GEN-LAST:event_btn_renew44ActionPerformed
 
-    private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
+    private void btn_add44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add44ActionPerformed
         // TODO add your handling code here:
         //thêm sp444
         try {
@@ -1677,9 +1677,9 @@ DecimalFormat df = new DecimalFormat("#");
 
         } catch (Exception e) {
         }
-    }//GEN-LAST:event_btn_addActionPerformed
+    }//GEN-LAST:event_btn_add44ActionPerformed
 
-    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+    private void btn_delete44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_delete44ActionPerformed
         // TODO add your handling code here:
         //xóa sp44
         try {
@@ -1690,7 +1690,7 @@ DecimalFormat df = new DecimalFormat("#");
         }
 
 //System.out.println(id);
-    }//GEN-LAST:event_btn_deleteActionPerformed
+    }//GEN-LAST:event_btn_delete44ActionPerformed
 
     private void btn_chosefileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_chosefileActionPerformed
         // TODO add your handling code here:
@@ -1861,21 +1861,21 @@ DecimalFormat df = new DecimalFormat("#");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_add;
+    private javax.swing.JButton btn_add44;
     private javax.swing.JButton btn_addcustomer;
     private javax.swing.JButton btn_addemployee;
     private javax.swing.JButton btn_chosefile;
     private javax.swing.JButton btn_customer;
     private javax.swing.JButton btn_delelteemplyee;
-    private javax.swing.JButton btn_delete;
+    private javax.swing.JButton btn_delete44;
     private javax.swing.JButton btn_deletecustomer;
-    private javax.swing.JButton btn_edit;
+    private javax.swing.JButton btn_edit44;
     private javax.swing.JButton btn_editcustomer;
     private javax.swing.JButton btn_editemployee;
     private javax.swing.JButton btn_employee;
     private javax.swing.JButton btn_logout_in;
     private javax.swing.JButton btn_products;
-    private javax.swing.JButton btn_renew;
+    private javax.swing.JButton btn_renew44;
     private javax.swing.JButton btn_renewcustomer;
     private javax.swing.JButton btn_renewemployee;
     private javax.swing.JButton btn_statistical;
